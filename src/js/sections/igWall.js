@@ -48,7 +48,7 @@ function nextPage() {
   }
   page++;
   toggleLoading(true);
-  $.get(`../demoJson/${page}.json?page_size=${pageSize}&page=${page}`, function (response, status) {
+  $.get(`./../demoJson/${page}.json?page_size=${pageSize}&page=${page}`, function (response, status) {
     console.log(response);
     if (response.data.length == 0) {
       noMoreData();

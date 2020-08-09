@@ -166,11 +166,6 @@ $compass-imagehelper-imagesmap: (
     height: '1320',
     hash: 'f81136646db9b6e1f8a568edfb2b5263'
   ),
-  'exprence.png': (
-    width: '2161',
-    height: '1729',
-    hash: '960213ee44b3b928e1ced8fe06d404ed'
-  ),
   'hero1.png': (
     width: '1024',
     height: '1486',
@@ -484,22 +479,6 @@ $compass-imagehelper-imagesmap: (
   // mime: image/jpeg;
   // hash: f81136646db9b6e1f8a568edfb2b5263;
   background-image: image-url('exprence.jpg');
-}
-
-%exprence-png {
-  // Available properties:
-  // prefix: ;
-  // width: 2161;
-  // height: 1729;
-  // filename: exprence.png;
-  // basename: exprence;
-  // dirname: images;
-  // ext: .png;
-  // path: exprence.png;
-  // fullname: exprence-png;
-  // mime: image/png;
-  // hash: 960213ee44b3b928e1ced8fe06d404ed;
-  background-image: image-url('exprence.png');
 }
 
 %hero1-png {
