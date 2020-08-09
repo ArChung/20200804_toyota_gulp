@@ -1,6 +1,8 @@
-function init_index(){
+function init_index() {
   console.log('init_index');
 
 
-  $('.test').html('454654665');
+  
 }
+
+

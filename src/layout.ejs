@@ -41,11 +41,9 @@
   <% include conponents/header %>
   <!-- navbar END -->
 
-  <div id='mainContainer'>
-    <!-- contents -->
-    <%- contents %>
-    <!-- contents END -->
-  </div>
+  <!-- contents -->
+  <%- contents %>
+  <!-- contents END -->
 
   <!-- footer -->
   <% include conponents/footer %>
@@ -55,7 +53,10 @@
   <!-- build:js js/lib.js -->
   <script type="text/javascript" src="js/lib/jquery.min.js"></script>
   <script type="text/javascript" src="js/lib/fastclick.js"></script>
+  <script type="text/javascript" src="js/lib/motus.web.js"></script>
   <!-- endbuild -->
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   <!-- js -->
   <script src="js/all.js"></script>
   <!-- js END-->

@@ -1,6 +1,6 @@
 function init_base() {
   const INIT_VIEWPORT = true;
-  const VIEWPORT_WIDTH = 600;
+  const VIEWPORT_WIDTH = 375;
 
 
   /////////////////////////////////////////////

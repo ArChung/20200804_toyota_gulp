@@ -1,0 +1,99 @@
+
+=header($height,$bg-color)
+  width: 100%
+  height: $height * 1px
+  background-color: $bg-color
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 40px
+  position: fixed
+  z-index: 100
+  letter-spacing: 0.1em
+  +phone 
+    padding: 0 
+    padding-left: 15px
+    // height: 90px
+  .menuBtn
+    +pc
+      display: none 
+    
+
+    
+
+
+=menu($txt-color,$font-size)
+  display: flex
+  color: $txt-color
+  height: 100%
+  
+
+  ul 
+    display: flex
+  li
+    padding: 0px 20px
+    height: 100%
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: $font-size * 1px
+
+
+  +phone 
+    +full
+    position: fixed
+    justify-content: center
+    align-items: center
+    transform: translate(100%, 0)
+    will-change: transform
+    +dTime(.3s)
+    &.active
+      transform: translate(0, 0)
+    .clozBtn
+      +bg('clozBtn.png')
+      position: absolute
+      top: 0
+      right: 0
+    ul 
+      flex-direction: column
+      li 
+        margin: 24px 0
+        &.active
+          padding: 20px 10px
+    
+
+  
+
+
+
+
+
+#header
+  +header(50,black)
+  #logo
+    +bg('logo.png')
+    position: relative
+    z-index: 10
+    // +phone
+    //   +bg('logo_m.png')
+  #menu
+    +menu(#C69C6D,18)
+    +phone
+      background-color: black
+
+    ul
+      li
+        +dTime
+        opacity: .7
+        &:hover
+          opacity: 1
+        &.active
+          opacity: 1
+          color: black
+          background-color: #C69C6D
+  .menuBtn
+    +bg('menuBtn.png')
+
+
+  

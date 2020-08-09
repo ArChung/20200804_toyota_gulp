@@ -1,25 +1,28 @@
+@function strip-unit($number)
+  @if type-of($number) == 'number' and not unitless($number)
+    @return $number / ($number * 0 + 1)
+  @return $number
 
-=pad 
-	@media screen and (max-width: $pad)
-		@content 
-=phone 
-	@media screen and (max-width: $phone)
-		@content 
-=pc 
-	@media screen and (min-width: $phone+1)
-		@content 	
-  
+=pad
+  @media screen and (max-width: $pad)
+    @content
+=phone
+  @media screen and (max-width: $phone)
+    @content
+=pc
+  @media screen and (min-width: $phone+1)
+    @content
+
 =bg($pic)
   width: image-width($pic)
   height: image-height($pic)
   background-image: image-url($pic)
+ 
 
 
 
 =bgi($pic)
   background-image: image-url($pic)
-
-
 
 =full
   position: absolute
@@ -30,36 +33,53 @@
 
 
 
+
 =ratio($width, $height)
-	position: relative
-	&:before
-		display: block
-		content: ""
-		width: 100%
-		padding-top: $height / $width * 100%
-	> *
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
+  position: relative
+  &:before
+    display: block
+    content: ""
+    width: 100%
+    padding-top: $height / $width * 100%
+  > *
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+=ratioBg($pic)
+  width: image-width($pic)
+  background-image: image-url($pic)
+  +coverBg
+  &:before
+    display: block
+    content: ""
+    width: 100%
+    padding-top: strip-unit(image-height($pic)) / strip-unit(image-width($pic)) * 100%
 
 =dTime($d:0.3s)
-	transition: all $d
+  transition: all $d
   // display: flex
 
 =coverBg($pic: null)
   background-size: cover
   background-position: 50% 50%
-  background-repeat: no-repeat 
+  background-repeat: no-repeat
   @if ($pic)
     +bgi($pic)
-
-
 
 =containBg($pic: null)
   background-size: contain
   background-position: 50% 50%
-  background-repeat: no-repeat 
+  background-repeat: no-repeat
   @if ($pic)
     +bgi($pic)
+
+=tag($pic)
+  +ratioBg($pic)
+  +phone 
+    width: image-width($pic) / 2
+  
+
+  

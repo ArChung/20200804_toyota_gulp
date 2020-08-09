@@ -1,1 +1,367 @@
-// index.sass
+html,body
+  background-color: rgba(black,1)
+
+// side bar
+.mainFrame
+  position: relative
+  min-height: 100vh
+  width: 100%
+  display: flex
+  overflow: hidden
+  .side-bar
+    width: 40px
+    background-color: black
+    z-index: 10
+    top: 0
+    +phone
+      width: 20px
+      background-size: contain 
+      
+    &.left
+      left: 0
+      +bgi('side.png')
+    &.right
+      right: 0
+      +bgi('side2.png')
+  +phone 
+    .side-bar
+      &.right
+        display: none
+      
+
+
+// main container
+.mainContainer
+  width: 100%
+  position: relative
+  z-index: 20
+  .page:not(:last-child)
+    margin-bottom: 20px
+
+
+// index
+#index 
+  height: 100vh
+  position: relative
+  z-index: 10
+  +phone
+    width: calc(100% + 20px)
+    left: -20px
+  .content
+    position: absolute
+    bottom: -20px
+    left: 10px
+    color: white
+    opacity: 0.85
+    z-index: 3
+    +phone 
+      bottom: -8px
+    .subTitle
+      font-size: 36px
+      margin-bottom: 20px
+      letter-spacing: 0.2em
+      font-weight: 600
+      +phone 
+        font-size: 3.5vw
+    .title
+      font-size: 165px
+      letter-spacing: 0.1em
+      line-height: 1.1em
+      font-weight: 600
+      +phone 
+        font-size: 16vw
+  .tags
+    +full
+    .tag
+      position: absolute
+      &.tag1
+        +tag('tag01.png')
+        // top: 50%
+        // margin-top: -300px
+        top: 70px
+        right: 0px
+      &.tag2
+        +tag('tag02.png')
+        top: 260px
+        right: 50px
+        +phone
+          top: 160px
+          right: 10px
+      &.tag3
+        +tag('tag03.png')
+        right: 50px
+        bottom: -130px
+        +phone
+          bottom: 0
+          right: 10px
+
+      &.tag4
+        +tag('tag04.png')
+        left: 55px
+        bottom: 440px
+        // margin-top: -180px
+        +phone
+          left: 10px
+          bottom: 270px
+        
+
+      &.tag5
+        +tag('tag05.png')
+        bottom: 230px
+        left: 48px
+        +phone
+          left: 10px
+          bottom: 150px
+  .bg
+    +full
+    +coverBg('index01.png')
+    +phone 
+      +coverBg('index01_m.png')
+
+    .bg-mask
+      +full
+      background-color: rgba(black,.2)
+
+
+#hero1
+  .container
+    > .tags
+      .tag1
+        +tag('p1-tag2.png')
+        left: 40%
+        top: 0
+      .tag2
+        +tag('p1-tag3.png')
+        right: 17px
+        top: 20px
+      .tag3
+        +tag('p1-tag4.png')
+        right: 22px
+        bottom: 24px
+  .pic
+    +coverBg('hero1.png')
+    background-position: 50% 20%
+    +phone 
+      +ratioBg('hero1.png')
+      width: calc( 100% + 28px )
+      position: relative
+      left: -14px
+      margin-top: 14px
+      background-position: 50% 50%
+    .tags
+      .tag1
+        +tag('p1-tag1.png')
+        bottom: 0
+        left: 5px
+
+#hero2
+  .container
+    > .tags
+      .tag1
+        +tag('p2-tag2.png')
+        left: 40%
+        top: 0
+      .tag2
+        +tag('p2-tag3.png')
+        right: 17px
+        top: 20px
+      .tag3
+        +tag('p2-tag4.png')
+        right: 22px
+        bottom: 24px
+  .pic
+    +coverBg('hero2.png')
+    background-position: 50% 0%
+    +phone 
+      +ratioBg('hero2.png')
+      width: calc( 100% + 28px )
+      position: relative
+      left: -14px
+      margin-top: 14px
+      background-position: 50% 50%
+    .tags
+      .tag1
+        +tag('p2-tag1.png')
+        top: 0
+        left: 0px
+
+
+#hero3
+  .container
+    > .tags
+      .tag1
+        +tag('p3-tag2.png')
+        left: 40%
+        top: 0
+      .tag2
+        +tag('p3-tag3.png')
+        right: 17px
+        top: 20px
+      .tag3
+        +tag('p3-tag4.png')
+        right: 22px
+        bottom: 24px
+  .pic
+    +coverBg('hero3.png')
+    background-position: 50% 0%
+    +phone 
+      +ratioBg('hero3.png')
+      width: calc( 100% + 28px )
+      position: relative
+      left: -14px
+      margin-top: 14px
+      background-position: 50% 50%
+    .tags
+      .tag1
+        +tag('p3-tag1.png')
+        bottom: 0
+        left: 0px
+
+
+
+#experience
+  .container
+    padding-bottom: 100px
+    > .tags
+      .tag1
+        +tag('e-tag2.png')
+        left: 260px
+        top: 0
+      .tag2
+        +tag('e-tag3.png')
+        right: 17px
+        top: 20px
+      .tag3
+        +tag('e-tag4.png')
+        right: 22px
+        bottom: 24px
+  .pic
+    +coverBg('exprence.jpg')
+    background-position: 50% 100%
+    +phone 
+      +ratioBg('exprence.jpg')
+      width: calc( 100% + 28px )
+      position: relative
+      left: -14px
+      margin-top: 14px
+      background-position: 50% 50%
+
+
+#pic-section
+  background-color: #F3EEE9
+  position: relative
+  .container
+    max-width: 1160px
+    padding: 0 35px 50px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    z-index: 3
+    +phone
+      padding: 0 15px 50px
+      align-items: flex-start
+    .txt
+      margin-top: -20px
+      +phone
+        margin-top: 5px
+    .title
+      font-size: 100px
+      letter-spacing: 0.1em
+      line-height: 120%
+      font-weight: 500
+      +phone
+        font-size: 13vw
+    .subtitle
+      font-weight: 500
+      font-size: 24px
+      letter-spacing: 0.1em
+      margin-top: 15px
+      +phone
+        font-size: 4.5vw
+    .picWall
+      margin-top: 45px
+      width: 100%
+
+      .gutter-sizer
+        width: 1%
+        // @media screen and (max-width: 1024px)
+        //   width: 33%
+        +phone 
+          width: 2%
+      
+
+      .grid-sizer,.grid-item
+        background-color: #fff
+        border-radius: 8px
+        overflow: hidden
+        width: 19%
+        margin-bottom: 15px
+
+        @media screen and (max-width: 1024px)
+          width: 24%
+        @media screen and (max-width: 850px)
+          width: 32%
+        +phone 
+          width: 48%
+
+
+        img
+          display: block
+          width: 100%
+        .media-content
+          padding: 10px 15px 15px
+          font-size: 14px
+          line-height: 150%
+          letter-spacing: 0.02em
+          .media-footer
+            display: flex
+            margin-top: 10px
+            color: #B3B3B3
+            font-size: 12px
+            line-height: 120%
+            letter-spacing: 0.1em
+            > *
+              margin-right: 15px
+            .m-like
+              +bg('i-heart.png')
+              display: inline-block
+              margin-right: 5px
+              vertical-align: text-top
+              margin-top: 4px
+
+            .m-comment
+              +bg('i-comment.png')
+              display: inline-block
+              margin-right: 5px
+              vertical-align: text-top
+              margin-top: 4px
+    .grid-loading
+      font-size: 16px
+      color: #B3B3B3
+      margin: 20px
+      letter-spacing: 0.2em
+      text-align: center
+
+  .tags
+    .tag1
+      +tag('p-tag1.png')
+      top: 0
+      right: 0
+    .tag2
+      +tag('p-tag2.png')
+      top: 180px  
+      right: 40px
+    .tag3
+      +tag('p-tag3.png')
+      right: 40px
+      bottom: 50px
+    .tag4
+      +tag('p-tag4.png')
+      top: 157px
+      left: 45px
+    .tag5
+      +tag('p-tag5.png')
+      bottom: 182px
+      left: 45px

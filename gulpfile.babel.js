@@ -236,7 +236,8 @@ export function watch() {
 
 exports.default = gulp.series(
   goSassImage,
-  gulp.parallel(imageMin,
+  gulp.parallel(
+    copy,
     babel,
     sass,
     ejs,

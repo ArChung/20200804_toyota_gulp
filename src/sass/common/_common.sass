@@ -1,1 +1,147 @@
 // commons
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&display=swap')
+
+html,body
+  font-family: 'Noto Serif TC', "微軟正黑體", "Microsoft JhengHei",  "STHeiti","STHeiti Light", Arial, sans-serif
+
+.gold-txt
+  color: #C69C6D
+
+.hero
+  display: flex
+  min-height: 500px
+  &.content-right
+    flex-direction: row-reverse
+
+  .container
+    position: relative
+    width: 50%
+    padding: 20px 24px 50px
+    padding-right: 70px
+    background-color: #F3EEE9
+    +phone
+      width: 100%
+      padding: 14px
+      padding-bottom: 50px
+    .content
+      position: relative
+      z-index: 2
+      font-weight: 500
+
+      .moreBlock
+        display: none
+        +phone
+          display: block
+          color: #B3B3B3
+          padding: 30px 0 20px
+          letter-spacing: 0.2em
+          font-size: 14px
+
+      +phone
+        .m-toggle-content
+          display: none
+
+        &.m-showfullContent
+          .moreBlock
+            display: none
+          .m-toggle-content
+            display: block
+      
+      .h-title
+        font-size: 100px
+        letter-spacing: 0.1em
+        line-height: 110%
+        +phone
+          font-size: 13vw
+
+      .h-subtitle
+        margin-top: 28px
+        font-size: 24px
+        line-height: 160%
+        letter-spacing: 0.1em
+        +phone
+          margin-top: 14px
+          font-size: 4.8vw
+
+      .h-content
+        font-size: 14px
+        line-height: 150%
+        letter-spacing: 0.1em
+        &.mt-3
+          margin-top: 35px
+        +phone
+          letter-spacing: 0.05em
+
+      .h-btn
+        border: 1px solid #000
+        height: 40px
+        padding: 0 20px
+        min-width: 135px
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        letter-spacing: .2em
+        margin-top: 20px
+        cursor: pointer
+        position: relative
+        +dTime(.2s)
+
+        &:after
+          position: absolute
+          content: ''
+          width: 0
+          height: 100%
+          top: 0
+          left: 0
+          background-color: black
+          +dTime(.2s)
+          z-index: -1
+
+        &:hover
+          color: #C69C6D
+          .i-yt
+            +bg('yt-hover.png')
+          &:after
+            width: 100%
+
+        .i-yt
+          margin-left: 5px
+          +dTime(.3s)
+          +bg('yt.png')
+          display: inline-block
+
+      .h-footer
+        margin-top: 88px
+        .h-content
+          margin-top: 18px
+  > .pic
+    position: relative
+    width: 50%
+    
+
+  &.content-black
+    .container
+      background-color: black
+      color: #C69C6D
+      .h-btn
+        border: 1px solid #C69C6D
+        &:after
+          background-color: #C69C6D
+
+        &:hover
+          color: black
+
+      .highlight
+        background-color: #C69C6D
+        color: black
+        display: inline-flex
+        padding: 4px 12px
+        margin-right: 15px
+
+.tags
+  +full
+  z-index: 1
+  .tag
+    position: absolute
+    will-change: transform
+    +dTime(0.1s)
