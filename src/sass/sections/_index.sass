@@ -49,27 +49,41 @@ html,body
     left: -20px
   .content
     position: absolute
-    bottom: -20px
-    left: 10px
+    bottom: -50px 
+    left: -20px
     color: white
     opacity: 0.85
     z-index: 3
+    width: 100%
     +phone 
-      bottom: -8px
-    .subTitle
-      font-size: 36px
-      margin-bottom: 20px
-      letter-spacing: 0.2em
-      font-weight: 600
-      +phone 
-        font-size: 3.5vw
+      left: 0
+      bottom: 0
     .title
-      font-size: 165px
-      letter-spacing: 0.1em
-      line-height: 1.1em
-      font-weight: 600
-      +phone 
-        font-size: 16vw
+      +ratioBg('index-title.png')
+      width: 100%
+      max-width: 1203px
+    // +phone 
+    //   bottom: -8px
+    // .subTitle
+    //   font-size: 96px
+    //   margin-bottom: 65px
+    //   letter-spacing: 0.2em
+    //   font-weight: 600
+    //   +phone 
+    //     font-size: 3.5vw
+    // .title
+    //   font-size: 170px
+    //   letter-spacing: 0.1em
+    //   line-height: 1.1em
+    //   font-weight: 600
+    //   margin-left: -40px
+    //   +phone 
+    //     font-size: 16vw
+
+    //   .strong 
+    //     font-size: 400px
+    //     vertical-align: baseline
+        
   .tags
     +full
     .tag
@@ -221,7 +235,100 @@ html,body
         bottom: 0
         left: 0px
 
+#hero4
+  .container
+    > .tags
+      .tag1
+        +tag('p4-tag2.png')
+        left: 40%
+        top: 0
+      .tag2
+        +tag('p4-tag3.png')
+        right: 17px
+        top: 20px
+      .tag3
+        +tag('p4-tag4.png')
+        right: 22px
+        bottom: 24px
+  .pic
+    +coverBg('hero4.png')
+    background-position: 50% 100%
+    +phone 
+      +ratioBg('hero4.png')
+      width: calc( 100% + 28px )
+      position: relative
+      left: -14px
+      margin-top: 14px
+      background-position: 50% 50%
+    .tags
+      .tag1
+        +tag('p4-tag1.png')
+        top: 0
+        left: 0px 
 
+
+#hero5
+  .container
+    > .tags
+      .tag1
+        +tag('p5-tag2.png')
+        left: 40%
+        top: 0
+      .tag2
+        +tag('p5-tag3.png')
+        right: 17px
+        top: 20px
+      .tag3
+        +tag('p5-tag4.png')
+        right: 22px
+        bottom: 24px
+  .pic
+    +coverBg('hero5.png')
+    background-position: 50% 50%
+    +phone 
+      +ratioBg('hero5.png')
+      width: calc( 100% + 28px )
+      position: relative
+      left: -14px
+      margin-top: 14px
+      background-position: 50% 50%
+    .tags
+      .tag1
+        +tag('p5-tag1.png')
+        bottom: 0
+        left: 0px
+
+
+#hero6
+  .container
+    > .tags
+      .tag1
+        +tag('p6-tag2.png')
+        left: 40%
+        top: 0
+      .tag2
+        +tag('p6-tag3.png')
+        right: 17px
+        top: 70px
+      .tag3
+        +tag('p6-tag4.png')
+        right: 22px
+        bottom: 24px
+  .pic
+    +coverBg('hero6.png')
+    background-position: 50% 80%
+    +phone 
+      +ratioBg('hero6.png')
+      width: calc( 100% + 28px )
+      position: relative
+      left: -14px
+      margin-top: 14px
+      background-position: 50% 50%
+    .tags
+      .tag1
+        +tag('p6-tag1.png')
+        right: 0  
+        top: 0
 
 #experience
   .container
@@ -271,19 +378,25 @@ html,body
       +phone
         margin-top: 5px
     .title
-      font-size: 100px
+      font-size: 105px
       letter-spacing: 0.1em
       line-height: 120%
       font-weight: 500
+      font-weight: bold
+      .stong
+        font-size: 180px
+        +phone
+          font-size: 22vw
       +phone
         font-size: 13vw
     .subtitle
       font-weight: 500
-      font-size: 24px
+      font-size: 18px
       letter-spacing: 0.1em
       margin-top: 15px
+      line-height: 150%
       +phone
-        font-size: 4.5vw
+        font-size: 3.5vw
     .picWall
       margin-top: 45px
       width: 100%

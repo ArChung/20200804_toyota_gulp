@@ -181,6 +181,21 @@ $compass-imagehelper-imagesmap: (
     height: '1485',
     hash: '1a9c603f7e4697b49342cf8176cccc2d'
   ),
+  'hero4.png': (
+    width: '1018',
+    height: '1550',
+    hash: 'aa006736ede5ead25d9f9096655d7ce4'
+  ),
+  'hero5.png': (
+    width: '1024',
+    height: '1486',
+    hash: '52304970fc79418c7e181135bd5205d1'
+  ),
+  'hero6.png': (
+    width: '1018',
+    height: '1501',
+    hash: '7b2bb7b64a2009cefad03b8e67edb3cc'
+  ),
   'i-comment.png': (
     width: '10',
     height: '11',
@@ -190,6 +205,11 @@ $compass-imagehelper-imagesmap: (
     width: '11',
     height: '11',
     hash: '4fcae31891df0a1a50572a5e35b7b986'
+  ),
+  'index-title.png': (
+    width: '1203',
+    height: '453',
+    hash: 'f928d15fe864db9819817bdf18cee805'
   ),
   'index01.png': (
     width: '2041',
@@ -305,6 +325,66 @@ $compass-imagehelper-imagesmap: (
     width: '70',
     height: '137',
     hash: 'da722e260d87e85b621bd753d48e340a'
+  ),
+  'p4-tag1.png': (
+    width: '340',
+    height: '379',
+    hash: 'bcb129e797edef77592e1669fa9152e0'
+  ),
+  'p4-tag2.png': (
+    width: '252',
+    height: '293',
+    hash: 'a2095d95f86e1a87fbafb0902d8c794a'
+  ),
+  'p4-tag3.png': (
+    width: '46',
+    height: '30',
+    hash: '5c492f491b851c9d15e3d0dfc128fe3d'
+  ),
+  'p4-tag4.png': (
+    width: '83',
+    height: '101',
+    hash: '9a084d216cf6ec7e51ffdb590327c6db'
+  ),
+  'p5-tag1.png': (
+    width: '431',
+    height: '382',
+    hash: 'fd3bccc7ca4e023170c606aaeb47fe7c'
+  ),
+  'p5-tag2.png': (
+    width: '314',
+    height: '374',
+    hash: '7984dec65c9a35efe3691651bfdc3a10'
+  ),
+  'p5-tag3.png': (
+    width: '56',
+    height: '28',
+    hash: 'b5a27875d3744cf5c18dc9748ba707d4'
+  ),
+  'p5-tag4.png': (
+    width: '56',
+    height: '138',
+    hash: '2352a6c9070a2383ef786f0d5f87ba1a'
+  ),
+  'p6-tag1.png': (
+    width: '377',
+    height: '382',
+    hash: 'fa1d8702d0e8af5ad868cfb043e185d6'
+  ),
+  'p6-tag2.png': (
+    width: '403',
+    height: '282',
+    hash: 'be4993795fb43ed6e33fd50bd7af774c'
+  ),
+  'p6-tag3.png': (
+    width: '56',
+    height: '30',
+    hash: 'a4edfc2841d4f07db02d433e0c193de6'
+  ),
+  'p6-tag4.png': (
+    width: '56',
+    height: '120',
+    hash: '9144dac1a69b01f2d0164d7247b32212'
   ),
   'side.png': (
     width: '39',
@@ -529,6 +609,54 @@ $compass-imagehelper-imagesmap: (
   background-image: image-url('hero3.png');
 }
 
+%hero4-png {
+  // Available properties:
+  // prefix: ;
+  // width: 1018;
+  // height: 1550;
+  // filename: hero4.png;
+  // basename: hero4;
+  // dirname: images;
+  // ext: .png;
+  // path: hero4.png;
+  // fullname: hero4-png;
+  // mime: image/png;
+  // hash: aa006736ede5ead25d9f9096655d7ce4;
+  background-image: image-url('hero4.png');
+}
+
+%hero5-png {
+  // Available properties:
+  // prefix: ;
+  // width: 1024;
+  // height: 1486;
+  // filename: hero5.png;
+  // basename: hero5;
+  // dirname: images;
+  // ext: .png;
+  // path: hero5.png;
+  // fullname: hero5-png;
+  // mime: image/png;
+  // hash: 52304970fc79418c7e181135bd5205d1;
+  background-image: image-url('hero5.png');
+}
+
+%hero6-png {
+  // Available properties:
+  // prefix: ;
+  // width: 1018;
+  // height: 1501;
+  // filename: hero6.png;
+  // basename: hero6;
+  // dirname: images;
+  // ext: .png;
+  // path: hero6.png;
+  // fullname: hero6-png;
+  // mime: image/png;
+  // hash: 7b2bb7b64a2009cefad03b8e67edb3cc;
+  background-image: image-url('hero6.png');
+}
+
 %i-comment-png {
   // Available properties:
   // prefix: ;
@@ -559,6 +687,22 @@ $compass-imagehelper-imagesmap: (
   // mime: image/png;
   // hash: 4fcae31891df0a1a50572a5e35b7b986;
   background-image: image-url('i-heart.png');
+}
+
+%index-title-png {
+  // Available properties:
+  // prefix: ;
+  // width: 1203;
+  // height: 453;
+  // filename: index-title.png;
+  // basename: index-title;
+  // dirname: images;
+  // ext: .png;
+  // path: index-title.png;
+  // fullname: index-title-png;
+  // mime: image/png;
+  // hash: f928d15fe864db9819817bdf18cee805;
+  background-image: image-url('index-title.png');
 }
 
 %index01-png {
@@ -927,6 +1071,198 @@ $compass-imagehelper-imagesmap: (
   // mime: image/png;
   // hash: da722e260d87e85b621bd753d48e340a;
   background-image: image-url('p3-tag4.png');
+}
+
+%p4-tag1-png {
+  // Available properties:
+  // prefix: ;
+  // width: 340;
+  // height: 379;
+  // filename: p4-tag1.png;
+  // basename: p4-tag1;
+  // dirname: images;
+  // ext: .png;
+  // path: p4-tag1.png;
+  // fullname: p4-tag1-png;
+  // mime: image/png;
+  // hash: bcb129e797edef77592e1669fa9152e0;
+  background-image: image-url('p4-tag1.png');
+}
+
+%p4-tag2-png {
+  // Available properties:
+  // prefix: ;
+  // width: 252;
+  // height: 293;
+  // filename: p4-tag2.png;
+  // basename: p4-tag2;
+  // dirname: images;
+  // ext: .png;
+  // path: p4-tag2.png;
+  // fullname: p4-tag2-png;
+  // mime: image/png;
+  // hash: a2095d95f86e1a87fbafb0902d8c794a;
+  background-image: image-url('p4-tag2.png');
+}
+
+%p4-tag3-png {
+  // Available properties:
+  // prefix: ;
+  // width: 46;
+  // height: 30;
+  // filename: p4-tag3.png;
+  // basename: p4-tag3;
+  // dirname: images;
+  // ext: .png;
+  // path: p4-tag3.png;
+  // fullname: p4-tag3-png;
+  // mime: image/png;
+  // hash: 5c492f491b851c9d15e3d0dfc128fe3d;
+  background-image: image-url('p4-tag3.png');
+}
+
+%p4-tag4-png {
+  // Available properties:
+  // prefix: ;
+  // width: 83;
+  // height: 101;
+  // filename: p4-tag4.png;
+  // basename: p4-tag4;
+  // dirname: images;
+  // ext: .png;
+  // path: p4-tag4.png;
+  // fullname: p4-tag4-png;
+  // mime: image/png;
+  // hash: 9a084d216cf6ec7e51ffdb590327c6db;
+  background-image: image-url('p4-tag4.png');
+}
+
+%p5-tag1-png {
+  // Available properties:
+  // prefix: ;
+  // width: 431;
+  // height: 382;
+  // filename: p5-tag1.png;
+  // basename: p5-tag1;
+  // dirname: images;
+  // ext: .png;
+  // path: p5-tag1.png;
+  // fullname: p5-tag1-png;
+  // mime: image/png;
+  // hash: fd3bccc7ca4e023170c606aaeb47fe7c;
+  background-image: image-url('p5-tag1.png');
+}
+
+%p5-tag2-png {
+  // Available properties:
+  // prefix: ;
+  // width: 314;
+  // height: 374;
+  // filename: p5-tag2.png;
+  // basename: p5-tag2;
+  // dirname: images;
+  // ext: .png;
+  // path: p5-tag2.png;
+  // fullname: p5-tag2-png;
+  // mime: image/png;
+  // hash: 7984dec65c9a35efe3691651bfdc3a10;
+  background-image: image-url('p5-tag2.png');
+}
+
+%p5-tag3-png {
+  // Available properties:
+  // prefix: ;
+  // width: 56;
+  // height: 28;
+  // filename: p5-tag3.png;
+  // basename: p5-tag3;
+  // dirname: images;
+  // ext: .png;
+  // path: p5-tag3.png;
+  // fullname: p5-tag3-png;
+  // mime: image/png;
+  // hash: b5a27875d3744cf5c18dc9748ba707d4;
+  background-image: image-url('p5-tag3.png');
+}
+
+%p5-tag4-png {
+  // Available properties:
+  // prefix: ;
+  // width: 56;
+  // height: 138;
+  // filename: p5-tag4.png;
+  // basename: p5-tag4;
+  // dirname: images;
+  // ext: .png;
+  // path: p5-tag4.png;
+  // fullname: p5-tag4-png;
+  // mime: image/png;
+  // hash: 2352a6c9070a2383ef786f0d5f87ba1a;
+  background-image: image-url('p5-tag4.png');
+}
+
+%p6-tag1-png {
+  // Available properties:
+  // prefix: ;
+  // width: 377;
+  // height: 382;
+  // filename: p6-tag1.png;
+  // basename: p6-tag1;
+  // dirname: images;
+  // ext: .png;
+  // path: p6-tag1.png;
+  // fullname: p6-tag1-png;
+  // mime: image/png;
+  // hash: fa1d8702d0e8af5ad868cfb043e185d6;
+  background-image: image-url('p6-tag1.png');
+}
+
+%p6-tag2-png {
+  // Available properties:
+  // prefix: ;
+  // width: 403;
+  // height: 282;
+  // filename: p6-tag2.png;
+  // basename: p6-tag2;
+  // dirname: images;
+  // ext: .png;
+  // path: p6-tag2.png;
+  // fullname: p6-tag2-png;
+  // mime: image/png;
+  // hash: be4993795fb43ed6e33fd50bd7af774c;
+  background-image: image-url('p6-tag2.png');
+}
+
+%p6-tag3-png {
+  // Available properties:
+  // prefix: ;
+  // width: 56;
+  // height: 30;
+  // filename: p6-tag3.png;
+  // basename: p6-tag3;
+  // dirname: images;
+  // ext: .png;
+  // path: p6-tag3.png;
+  // fullname: p6-tag3-png;
+  // mime: image/png;
+  // hash: a4edfc2841d4f07db02d433e0c193de6;
+  background-image: image-url('p6-tag3.png');
+}
+
+%p6-tag4-png {
+  // Available properties:
+  // prefix: ;
+  // width: 56;
+  // height: 120;
+  // filename: p6-tag4.png;
+  // basename: p6-tag4;
+  // dirname: images;
+  // ext: .png;
+  // path: p6-tag4.png;
+  // fullname: p6-tag4-png;
+  // mime: image/png;
+  // hash: 9144dac1a69b01f2d0164d7247b32212;
+  background-image: image-url('p6-tag4.png');
 }
 
 %side-png {

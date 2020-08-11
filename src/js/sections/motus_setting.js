@@ -108,10 +108,97 @@ function init_motus(){
     }, ],
   }));
 
-
+  // Kenji & Hsin Fan
 
   Motus.addAnimation(new Motus.Animation({
     $el: $('#ani-tag-5-1')[0],
+    keyframes: [{
+      translateY: 0,
+    }, {
+      translateY: 250,
+    }, ],
+  }));
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-5-2')[0],
+    keyframes: [{
+      translateY: 0,
+    }, {
+      translateY: 150,
+    }, ],
+  }));
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-5-3')[0],
+    keyframes: [{
+      translateY: 0,
+    }, {
+      translateY: 100,
+    }, ],
+  }));
+
+  // 阿酸
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-6-1')[0],
+    keyframes: [{
+      translateY: 0,
+    }, {
+      translateY: -250,
+    }, ],
+  }));
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-6-2')[0],
+    keyframes: [{
+      translateY: 0,
+    }, {
+      translateY: -150,
+    }, ],
+  }));
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-6-3')[0],
+    keyframes: [{
+      translateY: 0,
+    }, {
+      translateY: 100,
+    }, ],
+  }));
+
+  // Chris
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-7-1')[0],
+    keyframes: [{
+      translateY: 0,
+    }, {
+      translateY: 250,
+    }, ],
+  }));
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-7-2')[0],
+    keyframes: [{
+      translateY: 0,
+    }, {
+      translateY: 150,
+    }, ],
+  }));
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-7-3')[0],
+    keyframes: [{
+      translateY: 0,
+    }, {
+      translateY: 100,
+    }, ],
+  }));
+
+
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-ig-1')[0],
     keyframes: [{
       translateY: 0,
     }, {

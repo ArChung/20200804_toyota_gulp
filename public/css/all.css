@@ -548,10 +548,17 @@ html, body {
           display: none; }
         .hero .container .content.m-showfullContent .m-toggle-content {
           display: block; } }
+      .hero .container .content .h-title-top {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 120%;
+        letter-spacing: 0.1em;
+        margin: 50px 0 15px; }
       .hero .container .content .h-title {
         font-size: 100px;
         letter-spacing: 0.1em;
-        line-height: 110%; }
+        line-height: 110%;
+        font-weight: bold; }
         @media screen and (max-width: 768px) {
           .hero .container .content .h-title {
             font-size: 13vw; } }
@@ -625,6 +632,8 @@ html, body {
           display: inline-block; }
       .hero .container .content .h-footer {
         margin-top: 88px; }
+        .hero .container .content .h-footer .h-subtitle {
+          font-weight: bold; }
         .hero .container .content .h-footer .h-content {
           margin-top: 18px; }
   .hero > .pic {
@@ -849,30 +858,29 @@ html, body {
       left: -20px; } }
   #index .content {
     position: absolute;
-    bottom: -20px;
-    left: 10px;
+    bottom: -50px;
+    left: -20px;
     color: white;
     opacity: 0.85;
-    z-index: 3; }
+    z-index: 3;
+    width: 100%; }
     @media screen and (max-width: 768px) {
       #index .content {
-        bottom: -8px; } }
-    #index .content .subTitle {
-      font-size: 36px;
-      margin-bottom: 20px;
-      letter-spacing: 0.2em;
-      font-weight: 600; }
-      @media screen and (max-width: 768px) {
-        #index .content .subTitle {
-          font-size: 3.5vw; } }
+        left: 0;
+        bottom: 0; } }
     #index .content .title {
-      font-size: 165px;
-      letter-spacing: 0.1em;
-      line-height: 1.1em;
-      font-weight: 600; }
-      @media screen and (max-width: 768px) {
-        #index .content .title {
-          font-size: 16vw; } }
+      width: 1203px;
+      background-image: url("../images/index-title.png");
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      width: 100%;
+      max-width: 1203px; }
+      #index .content .title:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 37.65586%; }
   #index .tags {
     position: absolute;
     width: 100%;
@@ -1284,6 +1292,279 @@ html, body {
       #hero3 .pic .tags .tag1 {
         width: 153px; } }
 
+#hero4 .container > .tags .tag1 {
+  width: 252px;
+  background-image: url("../images/p4-tag2.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  left: 40%;
+  top: 0; }
+  #hero4 .container > .tags .tag1:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 116.26984%; }
+  @media screen and (max-width: 768px) {
+    #hero4 .container > .tags .tag1 {
+      width: 126px; } }
+
+#hero4 .container > .tags .tag2 {
+  width: 46px;
+  background-image: url("../images/p4-tag3.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  right: 17px;
+  top: 20px; }
+  #hero4 .container > .tags .tag2:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 65.21739%; }
+  @media screen and (max-width: 768px) {
+    #hero4 .container > .tags .tag2 {
+      width: 23px; } }
+
+#hero4 .container > .tags .tag3 {
+  width: 83px;
+  background-image: url("../images/p4-tag4.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  right: 22px;
+  bottom: 24px; }
+  #hero4 .container > .tags .tag3:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 121.68675%; }
+  @media screen and (max-width: 768px) {
+    #hero4 .container > .tags .tag3 {
+      width: 41.5px; } }
+
+#hero4 .pic {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url("../images/hero4.png");
+  background-position: 50% 100%; }
+  @media screen and (max-width: 768px) {
+    #hero4 .pic {
+      width: 1018px;
+      background-image: url("../images/hero4.png");
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      width: calc( 100% + 28px);
+      position: relative;
+      left: -14px;
+      margin-top: 14px;
+      background-position: 50% 50%; }
+      #hero4 .pic:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 152.25933%; } }
+  #hero4 .pic .tags .tag1 {
+    width: 340px;
+    background-image: url("../images/p4-tag1.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0px; }
+    #hero4 .pic .tags .tag1:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 111.47059%; }
+    @media screen and (max-width: 768px) {
+      #hero4 .pic .tags .tag1 {
+        width: 170px; } }
+
+#hero5 .container > .tags .tag1 {
+  width: 314px;
+  background-image: url("../images/p5-tag2.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  left: 40%;
+  top: 0; }
+  #hero5 .container > .tags .tag1:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 119.10828%; }
+  @media screen and (max-width: 768px) {
+    #hero5 .container > .tags .tag1 {
+      width: 157px; } }
+
+#hero5 .container > .tags .tag2 {
+  width: 56px;
+  background-image: url("../images/p5-tag3.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  right: 17px;
+  top: 20px; }
+  #hero5 .container > .tags .tag2:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 50%; }
+  @media screen and (max-width: 768px) {
+    #hero5 .container > .tags .tag2 {
+      width: 28px; } }
+
+#hero5 .container > .tags .tag3 {
+  width: 56px;
+  background-image: url("../images/p5-tag4.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  right: 22px;
+  bottom: 24px; }
+  #hero5 .container > .tags .tag3:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 246.42857%; }
+  @media screen and (max-width: 768px) {
+    #hero5 .container > .tags .tag3 {
+      width: 28px; } }
+
+#hero5 .pic {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url("../images/hero5.png");
+  background-position: 50% 50%; }
+  @media screen and (max-width: 768px) {
+    #hero5 .pic {
+      width: 1024px;
+      background-image: url("../images/hero5.png");
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      width: calc( 100% + 28px);
+      position: relative;
+      left: -14px;
+      margin-top: 14px;
+      background-position: 50% 50%; }
+      #hero5 .pic:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 145.11719%; } }
+  #hero5 .pic .tags .tag1 {
+    width: 431px;
+    background-image: url("../images/p5-tag1.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0px; }
+    #hero5 .pic .tags .tag1:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 88.63109%; }
+    @media screen and (max-width: 768px) {
+      #hero5 .pic .tags .tag1 {
+        width: 215.5px; } }
+
+#hero6 .container > .tags .tag1 {
+  width: 403px;
+  background-image: url("../images/p6-tag2.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  left: 40%;
+  top: 0; }
+  #hero6 .container > .tags .tag1:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 69.97519%; }
+  @media screen and (max-width: 768px) {
+    #hero6 .container > .tags .tag1 {
+      width: 201.5px; } }
+
+#hero6 .container > .tags .tag2 {
+  width: 56px;
+  background-image: url("../images/p6-tag3.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  right: 17px;
+  top: 70px; }
+  #hero6 .container > .tags .tag2:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 53.57143%; }
+  @media screen and (max-width: 768px) {
+    #hero6 .container > .tags .tag2 {
+      width: 28px; } }
+
+#hero6 .container > .tags .tag3 {
+  width: 56px;
+  background-image: url("../images/p6-tag4.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  right: 22px;
+  bottom: 24px; }
+  #hero6 .container > .tags .tag3:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 214.28571%; }
+  @media screen and (max-width: 768px) {
+    #hero6 .container > .tags .tag3 {
+      width: 28px; } }
+
+#hero6 .pic {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url("../images/hero6.png");
+  background-position: 50% 80%; }
+  @media screen and (max-width: 768px) {
+    #hero6 .pic {
+      width: 1018px;
+      background-image: url("../images/hero6.png");
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      width: calc( 100% + 28px);
+      position: relative;
+      left: -14px;
+      margin-top: 14px;
+      background-position: 50% 50%; }
+      #hero6 .pic:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 147.44597%; } }
+  #hero6 .pic .tags .tag1 {
+    width: 377px;
+    background-image: url("../images/p6-tag1.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    right: 0;
+    top: 0; }
+    #hero6 .pic .tags .tag1:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 101.32626%; }
+    @media screen and (max-width: 768px) {
+      #hero6 .pic .tags .tag1 {
+        width: 188.5px; } }
+
 #experience .container {
   padding-bottom: 100px; }
   #experience .container > .tags .tag1 {
@@ -1390,21 +1671,28 @@ html, body {
         #pic-section .container .txt {
           margin-top: 5px; } }
     #pic-section .container .title {
-      font-size: 100px;
+      font-size: 105px;
       letter-spacing: 0.1em;
       line-height: 120%;
-      font-weight: 500; }
+      font-weight: 500;
+      font-weight: bold; }
+      #pic-section .container .title .stong {
+        font-size: 180px; }
+        @media screen and (max-width: 768px) {
+          #pic-section .container .title .stong {
+            font-size: 22vw; } }
       @media screen and (max-width: 768px) {
         #pic-section .container .title {
           font-size: 13vw; } }
     #pic-section .container .subtitle {
       font-weight: 500;
-      font-size: 24px;
+      font-size: 18px;
       letter-spacing: 0.1em;
-      margin-top: 15px; }
+      margin-top: 15px;
+      line-height: 150%; }
       @media screen and (max-width: 768px) {
         #pic-section .container .subtitle {
-          font-size: 4.5vw; } }
+          font-size: 3.5vw; } }
     #pic-section .container .picWall {
       margin-top: 45px;
       width: 100%; }
