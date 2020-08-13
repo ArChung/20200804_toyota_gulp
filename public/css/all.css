@@ -507,6 +507,56 @@ html, body {
 .gold-txt {
   color: #C69C6D; }
 
+.h-btn {
+  border: 1px solid #000;
+  height: 40px;
+  padding: 0 20px;
+  min-width: 135px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: .2em;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+  .h-btn:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    z-index: -1; }
+  .h-btn:hover {
+    color: #C69C6D; }
+    .h-btn:hover .i-yt {
+      width: 18px;
+      height: 14px;
+      background-image: url("../images/yt-hover.png"); }
+    .h-btn:hover:after {
+      width: 100%; }
+  .h-btn .i-yt {
+    margin-left: 5px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 18px;
+    height: 14px;
+    background-image: url("../images/yt.png");
+    display: inline-block; }
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -581,55 +631,7 @@ html, body {
           .hero .container .content .h-content {
             letter-spacing: 0.05em; } }
       .hero .container .content .h-btn {
-        border: 1px solid #000;
-        height: 40px;
-        padding: 0 20px;
-        min-width: 135px;
-        display: -webkit-inline-box;
-        display: -ms-inline-flexbox;
-        display: inline-flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        letter-spacing: .2em;
-        margin-top: 20px;
-        cursor: pointer;
-        position: relative;
-        -webkit-transition: all 0.2s;
-        -o-transition: all 0.2s;
-        transition: all 0.2s; }
-        .hero .container .content .h-btn:after {
-          position: absolute;
-          content: '';
-          width: 0;
-          height: 100%;
-          top: 0;
-          left: 0;
-          background-color: black;
-          -webkit-transition: all 0.2s;
-          -o-transition: all 0.2s;
-          transition: all 0.2s;
-          z-index: -1; }
-        .hero .container .content .h-btn:hover {
-          color: #C69C6D; }
-          .hero .container .content .h-btn:hover .i-yt {
-            width: 18px;
-            height: 14px;
-            background-image: url("../images/yt-hover.png"); }
-          .hero .container .content .h-btn:hover:after {
-            width: 100%; }
-        .hero .container .content .h-btn .i-yt {
-          margin-left: 5px;
-          -webkit-transition: all 0.3s;
-          -o-transition: all 0.3s;
-          transition: all 0.3s;
-          width: 18px;
-          height: 14px;
-          background-image: url("../images/yt.png");
-          display: inline-block; }
+        margin-top: 20px; }
       .hero .container .content .h-footer {
         margin-top: 88px; }
         .hero .container .content .h-footer .h-subtitle {
@@ -858,16 +860,26 @@ html, body {
       left: -20px; } }
   #index .content {
     position: absolute;
-    bottom: -50px;
+    bottom: 20px;
     left: -20px;
-    color: white;
-    opacity: 0.85;
     z-index: 3;
     width: 100%; }
     @media screen and (max-width: 768px) {
       #index .content {
         left: 0;
         bottom: 0; } }
+    #index .content .btn {
+      position: absolute;
+      z-index: 5;
+      bottom: 8px;
+      right: 20px;
+      background-color: white;
+      height: 50px; }
+      @media screen and (max-width: 768px) {
+        #index .content .btn {
+          right: auto;
+          left: 7%;
+          bottom: 0; } }
     #index .content .title {
       width: 1203px;
       background-image: url("../images/index-title.png");
@@ -875,12 +887,28 @@ html, body {
       background-position: 50% 50%;
       background-repeat: no-repeat;
       width: 100%;
-      max-width: 1203px; }
+      max-width: 1203px;
+      position: relative;
+      opacity: 0.85; }
       #index .content .title:before {
         display: block;
         content: "";
         width: 100%;
-        padding-top: 37.65586%; }
+        padding-top: 44.3059%; }
+      @media screen and (max-width: 768px) {
+        #index .content .title {
+          width: 672px;
+          background-image: url("../images/index-title_m.png");
+          background-size: cover;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          width: 95%;
+          bottom: 60px; }
+          #index .content .title:before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: 49.55357%; } }
   #index .tags {
     position: absolute;
     width: 100%;
@@ -1624,7 +1652,7 @@ html, body {
   background-position: 50% 100%; }
   @media screen and (max-width: 768px) {
     #experience .pic {
-      width: 1022px;
+      width: 959px;
       background-image: url("../images/exprence.jpg");
       background-size: cover;
       background-position: 50% 50%;
@@ -1638,7 +1666,7 @@ html, body {
         display: block;
         content: "";
         width: 100%;
-        padding-top: 132.68102%; } }
+        padding-top: 138.58186%; } }
 
 #pic-section {
   background-color: #F3EEE9;
