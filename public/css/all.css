@@ -507,6 +507,9 @@ html, body {
 .gold-txt {
   color: #C69C6D; }
 
+.fw-b {
+  font-weight: bold; }
+
 .h-btn {
   border: 1px solid #000;
   height: 40px;
@@ -812,6 +815,61 @@ html, body {
   #footer .note {
     color: #B3B3B3;
     margin-top: 16px; }
+
+.blocker {
+  z-index: 100;
+  padding: 50px 25px; }
+  @media screen and (max-width: 768px) {
+    .blocker {
+      padding: 50px 15px; } }
+  .blocker .modal {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #C69C6D;
+    padding: 100px 128px; }
+    @media screen and (max-width: 768px) {
+      .blocker .modal {
+        padding: 50px 15px; } }
+    .blocker .modal a.close-modal {
+      display: none; }
+    .blocker .modal .clozBtn {
+      position: absolute;
+      top: 32px;
+      right: 32px;
+      width: 55px;
+      height: 55px;
+      background-image: url("../images/clozBtn-pop.png");
+      cursor: pointer;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+      @media screen and (min-width: 769px) {
+        .blocker .modal .clozBtn:hover {
+          -webkit-transform: rotate(90deg);
+              -ms-transform: rotate(90deg);
+                  transform: rotate(90deg); } }
+      @media screen and (max-width: 768px) {
+        .blocker .modal .clozBtn {
+          -webkit-transform: scale(0.5);
+              -ms-transform: scale(0.5);
+                  transform: scale(0.5);
+          right: 0;
+          top: 0; } }
+    .blocker .modal .title {
+      font-size: 48px;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 50px; }
+      @media screen and (max-width: 768px) {
+        .blocker .modal .title {
+          font-size: 8vw; } }
+    .blocker .modal p {
+      font-size: 18px;
+      line-height: 180%;
+      margin-bottom: 25px; }
+      @media screen and (max-width: 768px) {
+        .blocker .modal p {
+          font-size: 14px; } }
 
 html, body {
   background-color: black; }

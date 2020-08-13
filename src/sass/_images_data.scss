@@ -126,6 +126,11 @@
 $compass-imagehelper-path-prefix: '../images/';
 
 $compass-imagehelper-imagesmap: (
+  'clozBtn-pop.png': (
+    width: '55',
+    height: '55',
+    hash: 'e70e06a3e34e4358d7c36afce2f02fa3'
+  ),
   'clozBtn.png': (
     width: '50',
     height: '50',
@@ -437,6 +442,22 @@ $compass-imagehelper-imagesmap: (
     hash: '0e607388a119e6260bfc587da3883763'
   ),
 );
+
+%clozBtn-pop-png {
+  // Available properties:
+  // prefix: ;
+  // width: 55;
+  // height: 55;
+  // filename: clozBtn-pop.png;
+  // basename: clozBtn-pop;
+  // dirname: images;
+  // ext: .png;
+  // path: clozBtn-pop.png;
+  // fullname: clozBtn-pop-png;
+  // mime: image/png;
+  // hash: e70e06a3e34e4358d7c36afce2f02fa3;
+  background-image: image-url('clozBtn-pop.png');
+}
 
 %clozBtn-png {
   // Available properties:

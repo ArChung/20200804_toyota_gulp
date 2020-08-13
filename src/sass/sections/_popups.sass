@@ -1,0 +1,44 @@
+
+.blocker
+  z-index: 100
+  padding: 50px 25px
+  +phone 
+    padding: 50px 15px
+  .modal
+    width: 100%
+    max-width: 1000px
+    background-color: #C69C6D
+    padding: 100px 128px
+    +phone 
+      padding: 50px 15px
+    a.close-modal
+      display: none
+    .clozBtn
+      position: absolute
+      top: 32px
+      right: 32px
+      +bg('clozBtn-pop.png')
+      cursor: pointer
+      +dTime
+      +pc
+        &:hover
+          transform: rotate(90deg)
+      +phone 
+        transform: scale(.5)
+        right: 0
+        top: 0
+    .title
+      font-size: 48px
+      font-weight: bold
+      display: inline-block
+      margin-bottom: 50px
+      +phone 
+        font-size: 8vw
+    p
+      font-size: 18px
+      line-height: 180%
+      margin-bottom: 25px
+      +phone 
+        font-size: 14px
+
+      
