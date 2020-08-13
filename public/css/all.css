@@ -867,19 +867,17 @@ html, body {
     @media screen and (max-width: 768px) {
       #index .content {
         left: 0;
-        bottom: 0; } }
+        bottom: 25px; } }
     #index .content .btn {
       position: absolute;
       z-index: 5;
       bottom: 8px;
       right: 20px;
-      background-color: white;
-      height: 50px; }
+      background-color: white; }
       @media screen and (max-width: 768px) {
         #index .content .btn {
           right: auto;
-          left: 7%;
-          bottom: 0; } }
+          left: 7%; } }
     #index .content .title {
       width: 1203px;
       background-image: url("../images/index-title.png");
