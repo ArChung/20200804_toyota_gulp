@@ -553,7 +553,7 @@ init_base();
 
 $(document).ready(() => {
   init_header();
-  init_index();
+  // init_index();
   init_moblie_content();
 
   initPagesView();
@@ -650,14 +650,14 @@ function initPicWall() {
 }
 
 function nextPage() {
-  console.log(456);
+  // console.log(456);
   if (loading) {
     return;
   }
   page++;
   toggleLoading(true);
   $.get(`./demoJson/${page}.json?page_size=${pageSize}&page=${page}`, function (response, status) {
-    console.log(response);
+    // console.log(response);
     if (response.data.length == 0) {
       noMoreData();
       return;
@@ -699,15 +699,6 @@ function noMoreData() {
   $gridLoading.remove();
   $gridLoading = null;
 }
-function init_index() {
-  console.log('init_index');
-
-
-
-}
-
-
-
 function init_motus() {
   // index
   Motus.addAnimation(new Motus.Animation({

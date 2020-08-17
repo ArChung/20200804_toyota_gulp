@@ -3,7 +3,7 @@ init_base();
 
 $(document).ready(() => {
   init_header();
-  init_index();
+  // init_index();
   init_moblie_content();
 
   initPagesView();

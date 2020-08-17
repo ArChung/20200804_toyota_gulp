@@ -42,14 +42,14 @@ function initPicWall() {
 }
 
 function nextPage() {
-  console.log(456);
+  // console.log(456);
   if (loading) {
     return;
   }
   page++;
   toggleLoading(true);
   $.get(`./demoJson/${page}.json?page_size=${pageSize}&page=${page}`, function (response, status) {
-    console.log(response);
+    // console.log(response);
     if (response.data.length == 0) {
       noMoreData();
       return;

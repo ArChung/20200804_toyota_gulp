@@ -870,6 +870,13 @@ html, body {
       @media screen and (max-width: 768px) {
         .blocker .modal p {
           font-size: 14px; } }
+    .blocker .modal a {
+      text-decoration: underline; }
+    .blocker .modal a:hover {
+      color: white; }
+
+.blue-txt {
+  color: #00376b; }
 
 html, body {
   background-color: black; }
