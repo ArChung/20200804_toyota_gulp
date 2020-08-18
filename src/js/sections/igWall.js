@@ -48,7 +48,7 @@ function nextPage() {
   }
   page++;
   toggleLoading(true);
-  $.get(`./demoJson/${page}.json?page_size=${pageSize}&page=${page}`, function (response, status) {
+  $.get(`https://event.catchad.com.tw/v2/api/event/toyota_life100/hashtag/entries?page_size=${pageSize}&page=${page}`, function (response, status) {
     // console.log(response);
     if (response.data.length == 0) {
       noMoreData();
