@@ -507,6 +507,9 @@ html, body {
 .gold-txt {
   color: #C69C6D; }
 
+.gray-txt {
+  color: #b6b2af; }
+
 .fw-b {
   font-weight: bold; }
 
@@ -957,7 +960,7 @@ html, body {
         display: block;
         content: "";
         width: 100%;
-        padding-top: 44.3059%; }
+        padding-top: 37.65586%; }
       @media screen and (max-width: 768px) {
         #index .content .title {
           width: 672px;
@@ -1111,7 +1114,7 @@ html, body {
          object-position: 50% 50%; }
 
 #hero1 .container > .tags .tag1 {
-  width: 306px;
+  width: 300px;
   background-image: url("../images/p1-tag2.png");
   background-size: cover;
   background-position: 50% 50%;
@@ -1122,13 +1125,13 @@ html, body {
     display: block;
     content: "";
     width: 100%;
-    padding-top: 118.30065%; }
+    padding-top: 119%; }
   @media screen and (max-width: 768px) {
     #hero1 .container > .tags .tag1 {
-      width: 153px; } }
+      width: 150px; } }
 
 #hero1 .container > .tags .tag2 {
-  width: 60px;
+  width: 59px;
   background-image: url("../images/p1-tag3.png");
   background-size: cover;
   background-position: 50% 50%;
@@ -1139,13 +1142,13 @@ html, body {
     display: block;
     content: "";
     width: 100%;
-    padding-top: 228.33333%; }
+    padding-top: 232.20339%; }
   @media screen and (max-width: 768px) {
     #hero1 .container > .tags .tag2 {
-      width: 30px; } }
+      width: 29.5px; } }
 
 #hero1 .container > .tags .tag3 {
-  width: 65px;
+  width: 63px;
   background-image: url("../images/p1-tag4.png");
   background-size: cover;
   background-position: 50% 50%;
@@ -1156,10 +1159,10 @@ html, body {
     display: block;
     content: "";
     width: 100%;
-    padding-top: 49.23077%; }
+    padding-top: 49.20635%; }
   @media screen and (max-width: 768px) {
     #hero1 .container > .tags .tag3 {
-      width: 32.5px; } }
+      width: 31.5px; } }
 
 #hero1 .pic {
   background-size: cover;
@@ -1185,7 +1188,7 @@ html, body {
         width: 100%;
         padding-top: 145.11719%; } }
   #hero1 .pic .tags .tag1 {
-    width: 438px;
+    width: 429px;
     background-image: url("../images/p1-tag1.png");
     background-size: cover;
     background-position: 50% 50%;
@@ -1196,13 +1199,13 @@ html, body {
       display: block;
       content: "";
       width: 100%;
-      padding-top: 92.46575%; }
+      padding-top: 93.00699%; }
     @media screen and (max-width: 768px) {
       #hero1 .pic .tags .tag1 {
-        width: 219px; } }
+        width: 214.5px; } }
 
 #hero2 .container > .tags .tag1 {
-  width: 444px;
+  width: 449px;
   background-image: url("../images/p2-tag2.png");
   background-size: cover;
   background-position: 50% 50%;
@@ -1213,13 +1216,13 @@ html, body {
     display: block;
     content: "";
     width: 100%;
-    padding-top: 68.01802%; }
+    padding-top: 65.92428%; }
   @media screen and (max-width: 768px) {
     #hero2 .container > .tags .tag1 {
-      width: 222px; } }
+      width: 224.5px; } }
 
 #hero2 .container > .tags .tag2 {
-  width: 105px;
+  width: 100px;
   background-image: url("../images/p2-tag3.png");
   background-size: cover;
   background-position: 50% 50%;
@@ -1230,13 +1233,13 @@ html, body {
     display: block;
     content: "";
     width: 100%;
-    padding-top: 27.61905%; }
+    padding-top: 29%; }
   @media screen and (max-width: 768px) {
     #hero2 .container > .tags .tag2 {
-      width: 52.5px; } }
+      width: 50px; } }
 
 #hero2 .container > .tags .tag3 {
-  width: 111px;
+  width: 108px;
   background-image: url("../images/p2-tag4.png");
   background-size: cover;
   background-position: 50% 50%;
@@ -1247,10 +1250,10 @@ html, body {
     display: block;
     content: "";
     width: 100%;
-    padding-top: 108.10811%; }
+    padding-top: 109.25926%; }
   @media screen and (max-width: 768px) {
     #hero2 .container > .tags .tag3 {
-      width: 55.5px; } }
+      width: 54px; } }
 
 #hero2 .pic {
   background-size: cover;
@@ -1276,7 +1279,7 @@ html, body {
         width: 100%;
         padding-top: 152.25933%; } }
   #hero2 .pic .tags .tag1 {
-    width: 283px;
+    width: 289px;
     background-image: url("../images/p2-tag1.png");
     background-size: cover;
     background-position: 50% 50%;
@@ -1287,13 +1290,13 @@ html, body {
       display: block;
       content: "";
       width: 100%;
-      padding-top: 136.39576%; }
+      padding-top: 132.17993%; }
     @media screen and (max-width: 768px) {
       #hero2 .pic .tags .tag1 {
-        width: 141.5px; } }
+        width: 144.5px; } }
 
 #hero3 .container > .tags .tag1 {
-  width: 494px;
+  width: 497px;
   background-image: url("../images/p3-tag2.png");
   background-size: cover;
   background-position: 50% 50%;
@@ -1304,13 +1307,13 @@ html, body {
     display: block;
     content: "";
     width: 100%;
-    padding-top: 56.88259%; }
+    padding-top: 55.93561%; }
   @media screen and (max-width: 768px) {
     #hero3 .container > .tags .tag1 {
-      width: 247px; } }
+      width: 248.5px; } }
 
 #hero3 .container > .tags .tag2 {
-  width: 42px;
+  width: 41px;
   background-image: url("../images/p3-tag3.png");
   background-size: cover;
   background-position: 50% 50%;
@@ -1321,10 +1324,10 @@ html, body {
     display: block;
     content: "";
     width: 100%;
-    padding-top: 73.80952%; }
+    padding-top: 73.17073%; }
   @media screen and (max-width: 768px) {
     #hero3 .container > .tags .tag2 {
-      width: 21px; } }
+      width: 20.5px; } }
 
 #hero3 .container > .tags .tag3 {
   width: 70px;
@@ -1367,7 +1370,7 @@ html, body {
         width: 100%;
         padding-top: 145.01953%; } }
   #hero3 .pic .tags .tag1 {
-    width: 306px;
+    width: 496px;
     background-image: url("../images/p3-tag1.png");
     background-size: cover;
     background-position: 50% 50%;
@@ -1378,10 +1381,10 @@ html, body {
       display: block;
       content: "";
       width: 100%;
-      padding-top: 124.5098%; }
+      padding-top: 76.41129%; }
     @media screen and (max-width: 768px) {
       #hero3 .pic .tags .tag1 {
-        width: 153px; } }
+        width: 248px; } }
 
 #hero4 .container > .tags .tag1 {
   width: 252px;
@@ -1640,7 +1643,7 @@ html, body {
         width: 100%;
         padding-top: 147.44597%; } }
   #hero6 .pic .tags .tag1 {
-    width: 377px;
+    width: 383px;
     background-image: url("../images/p6-tag1.png");
     background-size: cover;
     background-position: 50% 50%;
@@ -1651,10 +1654,10 @@ html, body {
       display: block;
       content: "";
       width: 100%;
-      padding-top: 101.32626%; }
+      padding-top: 99.7389%; }
     @media screen and (max-width: 768px) {
       #hero6 .pic .tags .tag1 {
-        width: 188.5px; } }
+        width: 191.5px; } }
 
 #experience .container {
   padding-bottom: 100px; }
