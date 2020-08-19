@@ -1171,12 +1171,12 @@ html, body {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url("../images/hero1.png");
+  background-image: url("../images/hero1.jpg");
   background-position: 50% 20%; }
   @media screen and (max-width: 768px) {
     #hero1 .pic {
       width: 1024px;
-      background-image: url("../images/hero1.png");
+      background-image: url("../images/hero1.jpg");
       background-size: cover;
       background-position: 50% 50%;
       background-repeat: no-repeat;
@@ -1262,12 +1262,12 @@ html, body {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url("../images/hero2.png");
+  background-image: url("../images/hero2.jpg");
   background-position: 50% 0%; }
   @media screen and (max-width: 768px) {
     #hero2 .pic {
       width: 1018px;
-      background-image: url("../images/hero2.png");
+      background-image: url("../images/hero2.jpg");
       background-size: cover;
       background-position: 50% 50%;
       background-repeat: no-repeat;
@@ -1353,12 +1353,12 @@ html, body {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url("../images/hero3.png");
+  background-image: url("../images/hero3.jpg");
   background-position: 50% 0%; }
   @media screen and (max-width: 768px) {
     #hero3 .pic {
       width: 1024px;
-      background-image: url("../images/hero3.png");
+      background-image: url("../images/hero3.jpg");
       background-size: cover;
       background-position: 50% 50%;
       background-repeat: no-repeat;
@@ -1444,12 +1444,12 @@ html, body {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url("../images/hero4.png");
+  background-image: url("../images/hero4.jpg");
   background-position: 50% 100%; }
   @media screen and (max-width: 768px) {
     #hero4 .pic {
       width: 1018px;
-      background-image: url("../images/hero4.png");
+      background-image: url("../images/hero4.jpg");
       background-size: cover;
       background-position: 50% 50%;
       background-repeat: no-repeat;
@@ -1535,12 +1535,12 @@ html, body {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url("../images/hero5.png");
+  background-image: url("../images/hero5.jpg");
   background-position: 50% 50%; }
   @media screen and (max-width: 768px) {
     #hero5 .pic {
       width: 1024px;
-      background-image: url("../images/hero5.png");
+      background-image: url("../images/hero5.jpg");
       background-size: cover;
       background-position: 50% 50%;
       background-repeat: no-repeat;
@@ -1626,12 +1626,12 @@ html, body {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url("../images/hero6.png");
+  background-image: url("../images/hero6.jpg");
   background-position: 50% 80%; }
   @media screen and (max-width: 768px) {
     #hero6 .pic {
       width: 1018px;
-      background-image: url("../images/hero6.png");
+      background-image: url("../images/hero6.jpg");
       background-size: cover;
       background-position: 50% 50%;
       background-repeat: no-repeat;
