@@ -169,7 +169,7 @@ export function babel() {
 export function imageMin() {
   return gulp
     .src("./src/images/*.{gif,png,jpg,jpeg}")
-    .pipe($.if(envIsPro, cache(imagemin([
+    .pipe($.if(true, cache(imagemin([
       //png
       imageminPngquant({
         speed: 1,
