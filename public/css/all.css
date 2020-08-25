@@ -744,6 +744,8 @@ html, body {
           align-items: center;
   padding: 0 40px;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 100;
   letter-spacing: 0.1em; }
   @media screen and (max-width: 768px) {
