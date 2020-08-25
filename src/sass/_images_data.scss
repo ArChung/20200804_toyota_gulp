@@ -126,6 +126,26 @@
 $compass-imagehelper-path-prefix: '../images/';
 
 $compass-imagehelper-imagesmap: (
+  'arr-l-1.png': (
+    width: '12',
+    height: '14',
+    hash: 'b03d1b7109f81863f7bb3672a766c9ee'
+  ),
+  'arr-l-2.png': (
+    width: '9',
+    height: '12',
+    hash: '79b4a4010d04e1c48192eaa6f1dfc336'
+  ),
+  'arr-r-1.png': (
+    width: '12',
+    height: '14',
+    hash: '1a23f62173f5c0cc061728336d048ed9'
+  ),
+  'arr-r-2.png': (
+    width: '9',
+    height: '12',
+    hash: 'ac582e5b45a2c752f15e520ba27d4a86'
+  ),
   'clozBtn-pop.png': (
     width: '55',
     height: '55',
@@ -447,6 +467,70 @@ $compass-imagehelper-imagesmap: (
     hash: '0e607388a119e6260bfc587da3883763'
   ),
 );
+
+%arr-l-1-png {
+  // Available properties:
+  // prefix: ;
+  // width: 12;
+  // height: 14;
+  // filename: arr-l-1.png;
+  // basename: arr-l-1;
+  // dirname: images;
+  // ext: .png;
+  // path: arr-l-1.png;
+  // fullname: arr-l-1-png;
+  // mime: image/png;
+  // hash: b03d1b7109f81863f7bb3672a766c9ee;
+  background-image: image-url('arr-l-1.png');
+}
+
+%arr-l-2-png {
+  // Available properties:
+  // prefix: ;
+  // width: 9;
+  // height: 12;
+  // filename: arr-l-2.png;
+  // basename: arr-l-2;
+  // dirname: images;
+  // ext: .png;
+  // path: arr-l-2.png;
+  // fullname: arr-l-2-png;
+  // mime: image/png;
+  // hash: 79b4a4010d04e1c48192eaa6f1dfc336;
+  background-image: image-url('arr-l-2.png');
+}
+
+%arr-r-1-png {
+  // Available properties:
+  // prefix: ;
+  // width: 12;
+  // height: 14;
+  // filename: arr-r-1.png;
+  // basename: arr-r-1;
+  // dirname: images;
+  // ext: .png;
+  // path: arr-r-1.png;
+  // fullname: arr-r-1-png;
+  // mime: image/png;
+  // hash: 1a23f62173f5c0cc061728336d048ed9;
+  background-image: image-url('arr-r-1.png');
+}
+
+%arr-r-2-png {
+  // Available properties:
+  // prefix: ;
+  // width: 9;
+  // height: 12;
+  // filename: arr-r-2.png;
+  // basename: arr-r-2;
+  // dirname: images;
+  // ext: .png;
+  // path: arr-r-2.png;
+  // fullname: arr-r-2-png;
+  // mime: image/png;
+  // hash: ac582e5b45a2c752f15e520ba27d4a86;
+  background-image: image-url('arr-r-2.png');
+}
 
 %clozBtn-pop-png {
   // Available properties:

@@ -169,7 +169,7 @@ export function babel() {
 export function imageMin() {
   return gulp
     .src("./src/images/*.{gif,png,jpg,jpeg}")
-    .pipe($.if(true, cache(imagemin([
+    .pipe(cache(imagemin([
       //png
       imageminPngquant({
         speed: 1,
@@ -198,7 +198,7 @@ export function imageMin() {
       imageminMozjpeg({
         quality: 90
       })
-    ]))))
+    ])))
     .pipe(gulp.dest("./public/images"))
     .pipe($.if(envIsPro, browserSync.stream()))
 
