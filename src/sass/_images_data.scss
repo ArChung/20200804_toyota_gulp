@@ -188,13 +188,18 @@ $compass-imagehelper-imagesmap: (
   ),
   'exprence.jpg': (
     width: '959',
+    height: '1770',
+    hash: '5b766ee84edcda9e7a3790ed0a79d370'
+  ),
+  'exprence_bak.jpg': (
+    width: '959',
     height: '1329',
     hash: 'e1aa448c4ecae65f5eb52922e90258f3'
   ),
   'hero1.jpg': (
-    width: '1024',
-    height: '1486',
-    hash: '5f9b31ca4ac2b1bf5a28058f8c57b5a3'
+    width: '1200',
+    height: '1715',
+    hash: '1644b0c15886d4bb2e54851b180aa733'
   ),
   'hero2.jpg': (
     width: '1018',
@@ -664,7 +669,7 @@ $compass-imagehelper-imagesmap: (
   // Available properties:
   // prefix: ;
   // width: 959;
-  // height: 1329;
+  // height: 1770;
   // filename: exprence.jpg;
   // basename: exprence;
   // dirname: images;
@@ -672,15 +677,31 @@ $compass-imagehelper-imagesmap: (
   // path: exprence.jpg;
   // fullname: exprence-jpg;
   // mime: image/jpeg;
-  // hash: e1aa448c4ecae65f5eb52922e90258f3;
+  // hash: 5b766ee84edcda9e7a3790ed0a79d370;
   background-image: image-url('exprence.jpg');
+}
+
+%exprence_bak-jpg {
+  // Available properties:
+  // prefix: ;
+  // width: 959;
+  // height: 1329;
+  // filename: exprence_bak.jpg;
+  // basename: exprence_bak;
+  // dirname: images;
+  // ext: .jpg;
+  // path: exprence_bak.jpg;
+  // fullname: exprence_bak-jpg;
+  // mime: image/jpeg;
+  // hash: e1aa448c4ecae65f5eb52922e90258f3;
+  background-image: image-url('exprence_bak.jpg');
 }
 
 %hero1-jpg {
   // Available properties:
   // prefix: ;
-  // width: 1024;
-  // height: 1486;
+  // width: 1200;
+  // height: 1715;
   // filename: hero1.jpg;
   // basename: hero1;
   // dirname: images;
@@ -688,7 +709,7 @@ $compass-imagehelper-imagesmap: (
   // path: hero1.jpg;
   // fullname: hero1-jpg;
   // mime: image/jpeg;
-  // hash: 5f9b31ca4ac2b1bf5a28058f8c57b5a3;
+  // hash: 1644b0c15886d4bb2e54851b180aa733;
   background-image: image-url('hero1.jpg');
 }
 
