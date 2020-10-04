@@ -16,7 +16,10 @@ $.fn.isInViewPort = function (offset) {
 
 function init_igWall() {
   initPicWall();
-  nextPage();
+  if ($('.grid-loading').length!=0) {
+    console.log('nextPage');
+    nextPage();
+  }
 }
 
 function initPicWall() {

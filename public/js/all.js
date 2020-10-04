@@ -1,2 +1,913 @@
-"use strict";var ChungTool=ChungTool||{},simpleShow=simpleShow||{},simpleHide=simpleHide||{};function init_base(){{const t="android"==navigator.userAgent.toLowerCase().match(/android/i),e=document.querySelector("meta[name=viewport]");if(t){const t=`target-densitydpi=${375/screen.width*window.devicePixelRatio*160}, width=375, user-scalable=no`;e.setAttribute("content",t)}else e.setAttribute("content","width=375 user-scalable=0")}FastClick.attach(document.body)}function init_moblie_content(){$(".moreBlock").click((function(){$(this).closest(".content").toggleClass("m-showfullContent")}))}function initPagesView(){setInterval((function(){const t=$(window).scrollTop();let e;$(".menuPage").each((n,o)=>{const a=$(o).offset().top+$(o).height();if(e=n,a>t+200)return!1}),$("#menu li").eq(e).addClass("active").siblings("li").removeClass("active")}),100)}function init_header(){$("#header .menuBtn,#header .clozBtn,#header li").click(()=>{$("#header #menu").toggleClass("active")}),$("#header li").click((function(){var t=$(this);ChungTool.pageScrollAni($(".menuPage-"+t.attr("data-menu")).offset().top-50)}))}!function(){function t(){return!!navigator.userAgent.match(/(iPod|iPhone|iPad)/)}function e(t){return void 0===t}function n(){var t=document.getElementById("share-a-tag");return null===t&&((t=document.createElement("a")).style="display: none;",t.id="share-a-tag",t.target="_blank",document.getElementsByTagName("body")[0].appendChild(t)),t}function o(t){t.preventDefault(),t.stopPropagation()}ChungTool.openGoogleApp=function(e){var o=n();t()?o.href="comgooglemaps://?q="+encodeURIComponent(e):o.href="https://maps.google.com/?q="+encodeURIComponent(e),o.click()},ChungTool.checkIdle=function(t,e,n){idleTimer=null,idleState=!1,idleWait=t,$("*").bind("touchend touchmove touchstart",(function(){clearTimeout(idleTimer),1==idleState&&n(),idleState=!1,idleTimer=setTimeout((function(){e(),idleState=!0}),idleWait)})),$("body").trigger("touchend")},ChungTool.scrollReachTop=function(t){return 0==t.scrollTop()},ChungTool.scrollReachEnd=function(t){return t.scrollTop()+t.innerHeight()>=t[0].scrollHeight},ChungTool.isIe=function(){return!(!document.documentMode&&!/Edge/.test(navigator.userAgent))},ChungTool.addWheelEvent=function(t,e,n){/Firefox/i.test(navigator.userAgent);var o=!0,a=null;t.mousewheel((function(t){a&&(clearTimeout(a),a=null),a=setTimeout((function(){a=null,o=!0}),100),o&&(o=!1,t.deltaY>0?e():n())}))},ChungTool.addSwipeUpDownEvent=function(t,e,n){var o,a,i=t;i.get(0).addEventListener("touchstart",(function(t){if(1!=t.targetTouches.length)return!1;o=a=t.targetTouches[0].pageY}),!1),i.get(0).addEventListener("touchmove",(function(t){if(t.preventDefault(),1!=t.targetTouches.length)return!1;a=t.targetTouches[0].pageY,i.css("margin-top",a-o)}),!1),i.get(0).addEventListener("touchend",(function(t){i.css("margin-top",0),a-o>100?e():a-o<-100&&n()}))},ChungTool.windoePosTop=function(){return void 0!==window.pageYOffset?window.pageYOffset:document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop?document.body.scrollTop:0},ChungTool.lockScroll=function(){var t=[self.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft,self.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop],e=jQuery("body");e.data("scroll-position",t),e.data("previous-overflow",e.css("overflow")),e.css("overflow","hidden"),window.scrollTo(t[0],t[1]),$(document.body).on("touchmove",o)},ChungTool.unLockScroll=function(){var t=jQuery("body"),n=t.data("scroll-position");e(n)||(t.css("overflow",t.data("previous-overflow")),window.scrollTo(n[0],n[1]),$(document.body).off("touchmove",o))},ChungTool.isPhone=function(){return new RegExp("Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile","i").test(navigator.userAgent)},ChungTool.pageScrollAni=function(t){(window.opera?"CSS1Compat"==document.compatMode?$("html"):$("body"):$("html,body")).animate({scrollTop:t},800)},ChungTool.shareToLine=function(t){var e=n();e.href="http://line.naver.jp/R/msg/text/?"+encodeURIComponent(t),e.click()},ChungTool.getAtagElement=n,ChungTool.int=function(t){return parseInt(t,10)},ChungTool.replayCssAni=function(t,e){t.removeClass(e),t.offset().width=t.offset().width,t.addClass(e)},ChungTool.getDivBgImage=function(t){return t.css("background-image").replace(/^url\(['"]?/,"").replace(/['"]?\)$/,"")},ChungTool.addYouTube=function(t,e){t.empty().append('<iframe allowfullscreen="" frameborder="0" height="100%" width="100%" src="http://www.youtube.com/embed/'+e+'?rel=0&autoplay=1"></iframe>')},ChungTool.maxlengthInpout=function(t,e){t.on("keyup",(function(){var t=e,n=$(this).val();if(n.length>t){var o=n.substr(0,t);$(this).val(o)}}))},ChungTool.txtByteLength=function(t){return null==t?0:("string"!=typeof t&&(t+=""),t.replace(/[^\x00-\xff]/g,"01").length)},ChungTool.removeClassWithFilter=function(t,e){t.each((function(t,n){var o=n.className.split(" ").filter((function(t){return 0!==t.lastIndexOf(e,0)}));n.className=$.trim(o.join(" "))}))},ChungTool.returnClassNameWithFilter=function(t,e){var n;return t.each((function(t,o){n=o.className.split(" ").filter((function(t){return 0==t.lastIndexOf(e,0)}))})),$.each(n,(function(t,o){n[t]=o.replace(e,"")})),n},ChungTool.capitalizeFirstLetter=function(t){return t.charAt(0).toUpperCase()+t.slice(1)},ChungTool.addSwipeEvent=function(t,e,n){var o,a;t.get(0).addEventListener("touchstart",(function(t){if(1!=t.targetTouches.length)return!1;o=t.targetTouches[0].pageX}),!1),t.get(0).addEventListener("touchmove",(function(t){if(t.preventDefault(),1!=t.targetTouches.length)return!1;a=t.targetTouches[0].pageX}),!1),t.get(0).addEventListener("touchend",(function(t){a-o>60?n():a-o<-60&&e()}))},ChungTool.initLimitText=function(){$(".limitTxt").each((function(){var t=$(this),n=parseInt(t.attr("data-limitTxtNum"),10),o="true"==t.attr("data-showBtn");if(!e(n)){var a=t.text();if((a=(a=a.replace(/ {2,}/g," ")).replace(/\n\s*\n/g,"\n")).length>n){var i='<span class="hide">'+a.substr(n,a.length)+'</span><a href="#" class="seeMoreContentBtn">more</a>';a=a.substr(0,n)+'<i class="dot"> ...</i>',o&&(a+=i),t.html(a)}}})),$(".seeMoreContentBtn").on("click",(function(t){t.preventDefault(),$(this).addClass("hide").siblings(".hide").removeClass("hide").siblings(".dot").addClass("hide")}))},ChungTool.getUrlParameter=function(t){var e,n,o=decodeURIComponent(window.location.search.substring(1)).split("&");for(n=0;n<o.length;n++)if((e=o[n].split("="))[0]===t)return void 0===e[1]||e[1]},ChungTool.isOnline=function(){return"file:"!=window.location.protocol},ChungTool.isNull=e,ChungTool.isIOS=t,simpleShow=function(t,n){e(n)&&(n=.3),t.each((function(){var t=$(this);t.removeClass("hide"),TweenMax.killTweensOf(t),(new TimelineMax).set(t,{autoAlpha:0}).to(t,n,{autoAlpha:1})}))},simpleHide=function(t,n){e(n)&&(n=.3),t.each((function(){var t=$(this),e=new TimelineMax;TweenMax.killTweensOf(t),e.to(t,n,{autoAlpha:0}).call((function(){t.addClass("hide")}))}))}}(),init_base(),$(document).ready(()=>{init_header(),init_moblie_content(),initPagesView(),init_igWall(),init_motus()});let $grid,loading=!1,pageSize=20,page=0,$gridLoading=$(".grid-loading");function init_igWall(){initPicWall(),nextPage()}function initPicWall(){$grid=$(".grid").masonry({itemSelector:".grid-item",columnWidth:".grid-sizer",gutter:".gutter-sizer",percentPosition:!0}),$grid.imagesLoaded().progress((function(){$grid.masonry("layout")})),$(window).on("scroll",(function(t){null!=$gridLoading&&$gridLoading.isInViewPort(-50)&&nextPage()}))}function nextPage(){loading||(page++,toggleLoading(!0),$.get(`https://event.catchad.com.tw/v2/api/event/toyota_life100/hashtag/entries?page_size=${pageSize}&page=${page}`,(function(t,e){if(0!=t.data.length){for(var n in t.data){var o=t.data[n],a=$("#grid-item-tpl").clone();a.attr("id","grid-item-"+o.id),a.css("visibility","hidden"),a.find("a").attr("href",o.permalink),a.find("img").attr("src",o.media_url),a.find(".like_count").text(o.like_count),a.find(".comments_count").text(o.comments_count),a.find("p").text(o.caption.substr(0,50)+"..."),$grid.append(a).masonry("appended",a)}$grid.imagesLoaded().progress((function(t,e){$(e.img).parents(".grid-item").css("visibility","visible"),$grid.masonry("layout")})).always((function(t){toggleLoading(!1)}))}else noMoreData()})))}function toggleLoading(t){loading=t,$gridLoading.css("visibility",t?"visible":"hidden")}function noMoreData(){loading=!1,$gridLoading.remove(),$gridLoading=null}function init_motus(){Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-1-1")[0],keyframes:[{translateY:-50},{translateY:200}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-1-2")[0],keyframes:[{translateY:50},{translateY:-50}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-2-1")[0],keyframes:[{translateY:0},{translateY:-250}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-2-2")[0],keyframes:[{translateY:0},{translateY:-150}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-2-3")[0],keyframes:[{translateY:0},{translateY:100}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-3-1")[0],keyframes:[{translateY:250},{translateY:0}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-3-2")[0],keyframes:[{translateY:150},{translateY:0}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-3-3")[0],keyframes:[{translateY:0},{translateY:100}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-4-1")[0],keyframes:[{translateY:0},{translateY:-250}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-4-2")[0],keyframes:[{translateY:0},{translateY:-150}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-4-3")[0],keyframes:[{translateY:0},{translateY:100}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-5-1")[0],keyframes:[{translateY:0},{translateY:250}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-5-2")[0],keyframes:[{translateY:0},{translateY:150}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-5-3")[0],keyframes:[{translateY:0},{translateY:100}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-6-1")[0],keyframes:[{translateY:0},{translateY:-250}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-6-2")[0],keyframes:[{translateY:0},{translateY:-150}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-6-3")[0],keyframes:[{translateY:0},{translateY:100}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-7-1")[0],keyframes:[{translateY:0},{translateY:250}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-7-2")[0],keyframes:[{translateY:0},{translateY:150}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-7-3")[0],keyframes:[{translateY:0},{translateY:100}]})),Motus.addAnimation(new Motus.Animation({$el:$("#ani-tag-ig-1")[0],keyframes:[{translateY:0},{translateY:100}]}))}$.fn.isInViewPort=function(t){var e=$(this).offset().top,n=e+$(this).outerHeight(),o=$(window).scrollTop(),a=o+$(window).height();return n>o&&e<a&&n<a-t};
+"use strict";var ChungTool = ChungTool || {};
+var simpleShow = simpleShow || {};
+var simpleHide = simpleHide || {};
+
+(function () {
+
+
+
+
+  function isIOS() {
+    if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+    sURLVariables = sPageURL.split('&'),
+    sParameterName,
+    i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+      sParameterName = sURLVariables[i].split('=');
+
+      if (sParameterName[0] === sParam) {
+        return sParameterName[1] === undefined ? true : sParameterName[1];
+      }
+    }
+  }
+
+  function isOnline() {
+    if (window.location.protocol == 'file:') {
+      console.log('在本機端喔');
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  function c_simpleShow(el, during) {
+    if (isNull(during)) {
+      during = 0.3;
+    }
+    el.each(function () {
+      var t = $(this);
+      t.removeClass('hide');
+      TweenMax.killTweensOf(t);
+      var tl = new TimelineMax();
+      tl.set(t, {
+        autoAlpha: 0 }).
+
+      to(t, during, {
+        autoAlpha: 1 });
+
+    });
+  }
+
+  function c_simpleHide(el, during) {
+    if (isNull(during)) {
+      during = 0.3;
+    }
+    el.each(function () {
+      var t = $(this);
+      var tl = new TimelineMax();
+      TweenMax.killTweensOf(t);
+      tl.to(t, during, {
+        autoAlpha: 0 }).
+
+      call(function () {
+        t.addClass('hide');
+      });
+    });
+    // console.log(123)
+  }
+
+  function isNull(val) {
+    return typeof val === "undefined";
+  }
+
+  function initLimitText() {
+    $('.limitTxt').each(function () {
+      var t = $(this);
+      var limitNum = parseInt(t.attr('data-limitTxtNum'), 10);
+      var showBtn = t.attr('data-showBtn') == 'true' ? true : false;
+
+      if (!isNull(limitNum)) {
+
+        var str = t.text(); // Getting the text
+        str = str.replace(/ {2,}/g, ' ');
+        str = str.replace(/\n\s*\n/g, '\n');
+
+        if (str.length > limitNum) {
+
+          var strtemp = '<span class="hide">' + str.substr(limitNum, str.length) + '</span><a href="#" class="seeMoreContentBtn">more</a>';
+          str = str.substr(0, limitNum) + '<i class="dot"> ...</i>';
+
+          if (showBtn) {
+            str += strtemp;
+          }
+
+          t.html(str);
+        }
+      }
+    });
+
+    $('.seeMoreContentBtn').on('click', function (e) {
+      e.preventDefault();
+      $(this).addClass('hide').siblings('.hide').removeClass('hide').siblings('.dot').addClass('hide');
+    });
+
+  }
+
+  function addSwipeEvent(t, funcL, funcR) {
+    // var touchObj = document.getElementById("index_banner_swipe");
+    var start_x;
+    var end_x;
+
+    t.get(0).addEventListener('touchstart', touchStart, false);
+    t.get(0).addEventListener('touchmove', touchMove, false);
+    t.get(0).addEventListener('touchend', touchSwipe);
+
+    function touchStart(event) {
+      if (event.targetTouches.length != 1) {
+        return false;
+      } //單點觸控
+
+      console.log(123);
+      start_x = event.targetTouches[0].pageX;
+      //alert(start_x);
+    }
+
+    function touchMove(event) {
+      event.preventDefault();
+      if (event.targetTouches.length != 1) {
+        return false;
+      } //單點觸控
+      end_x = event.targetTouches[0].pageX;
+      //alert(end_x - start_x);
+    }
+
+    function touchSwipe(event) {
+      if (end_x - start_x > 60) {
+        funcR();
+
+      } else if (end_x - start_x < -60) {
+        funcL();
+      }
+    }
+  }
+
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+
+  /* 清除以prefix開頭的所有class*/
+  function removeClassWithFilter(elemt, prefix) {
+    elemt.each(function (i, el) {
+      var classes = el.className.split(" ").filter(function (c) {
+        return c.lastIndexOf(prefix, 0) !== 0;
+      });
+      el.className = $.trim(classes.join(" "));
+    });
+  };
+
+  /* 回傳以prefix開頭的class拿掉以prefix開頭後的文字*/
+  function returnClassNameWithFilter(elemt, prefix) {
+    var arr;
+    elemt.each(function (i, el) {
+      arr = el.className.split(" ").filter(function (c) {
+        return c.lastIndexOf(prefix, 0) == 0;
+      });
+    });
+
+    $.each(arr, function (index, value) {
+      arr[index] = value.replace(prefix, "");
+    });
+    return arr;
+  };
+
+  /* 用來算中英混合的長度 */
+  function txtByteLength(str) {
+
+    if (str == null) return 0;
+    if (typeof str != "string") {
+      str += "";
+    }
+    return str.replace(/[^\x00-\xff]/g, "01").length;
+
+  }
+
+  function maxlengthInpout(el, num) {
+    el.on('keyup', function () {
+      //get the limit from maxlength attribute  
+      var limit = num;
+      //get the current text inside the textarea  
+      var text = $(this).val();
+      //count the number of characters in the text  
+      var chars = text.length;
+
+      console.log(chars);
+      //check if there are more characters then allowed  
+      if (chars > limit) {
+        //and if there are use substr to get the text before the limit  
+        var new_text = text.substr(0, limit);
+
+        //and change the current text with the new text  
+        $(this).val(new_text);
+      }
+    });
+  }
+
+
+
+  function addYouTube(el, vid) {
+    el.empty().append('<iframe allowfullscreen="" frameborder="0" height="100%" width="100%" src="http://www.youtube.com/embed/' + vid + '?rel=0&autoplay=1"></iframe>');
+  }
+
+  function getDivBgImage(el) {
+    return el.css('background-image').replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+  }
+
+  function replayCssAni(el, className) {
+    el.removeClass(className);
+    el.offset().width = el.offset().width;
+    el.addClass(className);
+
+  }
+
+  function int(s) {
+    return parseInt(s, 10);
+  }
+
+  // $.fn.enterKey = function(fnc) {
+  //     return this.each(function() {
+  //         $(this).keypress(function(ev) {
+  //             var keycode = (ev.keyCode ? ev.keyCode : ev.which);
+  //             if (keycode == '13') {
+  //                 fnc.call(this, ev);
+  //             }
+  //         })
+  //     })
+  // }
+
+
+  function getAtagElement() {
+    var element = document.getElementById('share-a-tag');
+    if (element === null) {
+      element = document.createElement('a');
+      element.style = "display: none;";
+      element.id = 'share-a-tag';
+      element.target = "_blank";
+      document.getElementsByTagName('body')[0].appendChild(element);
+    }
+    return element;
+  };
+
+  function shareToLine(s) {
+    var element = getAtagElement();
+    element.href = 'http://line.naver.jp/R/msg/text/?' + encodeURIComponent(s);
+
+    element.click();
+
+  }
+
+  function pageScrollAni(top) {
+    var $body = window.opera ? document.compatMode == "CSS1Compat" ? $('html') : $('body') : $('html,body');
+    $body.animate({
+      scrollTop: top },
+    800);
+  }
+
+  function isPhone() {
+    var testExp = new RegExp('Android|webOS|iPhone|iPad|' +
+    'BlackBerry|Windows Phone|' +
+    'Opera Mini|IEMobile|Mobile',
+    'i');
+    return testExp.test(navigator.userAgent);
+  }
+
+  function lockScroll() {
+
+    var scrollPosition = [
+    self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+    self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop];
+
+    var html = jQuery('body'); // it would make more sense to apply this to body, but IE7 won't have that
+    html.data('scroll-position', scrollPosition);
+    html.data('previous-overflow', html.css('overflow'));
+    html.css('overflow', 'hidden');
+    window.scrollTo(scrollPosition[0], scrollPosition[1]);
+
+    $(document.body).on("touchmove", preventScroll);
+  }
+
+  function unLockScroll() {
+    var html = jQuery('body');
+    var scrollPosition = html.data('scroll-position');
+
+    if (!isNull(scrollPosition)) {
+      html.css('overflow', html.data('previous-overflow'));
+      window.scrollTo(scrollPosition[0], scrollPosition[1]);
+      $(document.body).off("touchmove", preventScroll);
+    }
+
+
+  }
+
+  function preventScroll(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
+  // scrollTop() ie 都只會傳回0
+  function windoePosTop() {
+    return typeof window.pageYOffset != 'undefined' ? window.pageYOffset : document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ? document.body.scrollTop : 0;
+  }
+  function addSwipeUpDownEvent(el, upFunc, downFunc) {
+    // var touchObj = document.getElementById("index_banner_swipe");
+    var start_y;
+    var end_y;
+    var t = el;
+
+    t.get(0).addEventListener('touchstart', touchStart, false);
+    t.get(0).addEventListener('touchmove', touchMove, false);
+    t.get(0).addEventListener('touchend', touchSwipe);
+
+    function touchStart(event) {
+
+      if (event.targetTouches.length != 1) {
+        return false;
+      } //單點觸控
+      start_y = end_y = event.targetTouches[0].pageY;
+
+    }
+
+    function touchMove(event) {
+      event.preventDefault();
+      if (event.targetTouches.length != 1) {
+        return false;
+      } //單點觸控
+      end_y = event.targetTouches[0].pageY;
+      t.css('margin-top', end_y - start_y);
+    }
+
+    function touchSwipe(event) {
+
+
+      t.css('margin-top', 0);
+      if (end_y - start_y > 100) {
+        upFunc();
+
+      } else if (end_y - start_y < -100) {
+        downFunc();
+      }
+    }
+  }
+
+  function addWheelEvent(el, upFunc, downFunc) {
+    var mousewheelevt = /Firefox/i.test(navigator.userAgent) ? "DOMMouseScroll" : "mousewheel"; //FF doesn't recognize mousewheel as of FF3.x
+    var scrollable = true;
+    var timer = null;
+
+
+
+
+
+    el.mousewheel(function (event) {
+      // console.log(event.deltaX, event.deltaY, event.deltaFactor);
+
+      if (timer) {
+        clearTimeout(timer);
+        timer = null;
+
+      }
+
+      timer = setTimeout(function () {
+        // console.log('done');
+        timer = null;
+        scrollable = true;
+      }, 100);
+
+
+      if (!scrollable) {
+        return;
+      } else {
+        scrollable = false;
+      }
+
+
+      if (event.deltaY > 0) {
+        upFunc();
+      } else {
+        downFunc();
+      }
+
+
+    });
+
+
+  }
+
+  function isIe() {
+    if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+
+      return true;
+    } else {
+
+      return false;
+    }
+
+  }
+
+  function scrollReachEnd(el) {
+    return el.scrollTop() + el.innerHeight() >= el[0].scrollHeight;
+  }
+  function scrollReachTop(el) {
+    return el.scrollTop() == 0;
+  }
+
+
+  function checkIdle(delay, func, func2) {
+    idleTimer = null;
+    idleState = false;
+    idleWait = delay;
+
+    $('*').bind('touchend touchmove touchstart', function () {
+
+
+      clearTimeout(idleTimer);
+
+      if (idleState == true) {
+        func2();
+      }
+
+      idleState = false;
+
+      idleTimer = setTimeout(function () {
+
+        // Idle Event
+        func();
+
+        idleState = true;
+      }, idleWait);
+    });
+
+    $("body").trigger("touchend");
+  }
+
+  function openGoogleApp(s) {
+    var element = getAtagElement();
+    if (isIOS()) {
+      element.href = 'comgooglemaps://?q=' + encodeURIComponent(s);
+    } else {
+      element.href = 'https://maps.google.com/?q=' + encodeURIComponent(s);
+    }
+    element.click();
+  }
+
+
+  ChungTool.openGoogleApp = openGoogleApp;
+
+  ChungTool.checkIdle = checkIdle;
+  ChungTool.scrollReachTop = scrollReachTop;
+  ChungTool.scrollReachEnd = scrollReachEnd;
+  ChungTool.isIe = isIe;
+  ChungTool.addWheelEvent = addWheelEvent;
+
+  ChungTool.addSwipeUpDownEvent = addSwipeUpDownEvent;
+
+  ChungTool.windoePosTop = windoePosTop;
+  ChungTool.lockScroll = lockScroll;
+  ChungTool.unLockScroll = unLockScroll;
+  ChungTool.isPhone = isPhone;
+
+  ChungTool.pageScrollAni = pageScrollAni;
+  //shareToLine
+  ChungTool.shareToLine = shareToLine;
+  //a tag
+  ChungTool.getAtagElement = getAtagElement;
+  // 轉成數字
+  ChungTool.int = int;
+  // 重跑css animation
+  ChungTool.replayCssAni = replayCssAni;
+  // 取得背景圖案
+  ChungTool.getDivBgImage = getDivBgImage;
+  // 加 youtube 到 el 裡
+  ChungTool.addYouTube = addYouTube;
+  // 限制input的最大輸入數
+  ChungTool.maxlengthInpout = maxlengthInpout;
+  // 計算中英文的長度 (中文2英文1)
+  ChungTool.txtByteLength = txtByteLength;
+  // 移除特定開頭的class
+  ChungTool.removeClassWithFilter = removeClassWithFilter;
+  // 回傳以prefix開頭的class拿掉以prefix開頭後的文字 
+  ChungTool.returnClassNameWithFilter = returnClassNameWithFilter;
+  ChungTool.capitalizeFirstLetter = capitalizeFirstLetter;
+  ChungTool.addSwipeEvent = addSwipeEvent;
+  ChungTool.initLimitText = initLimitText;
+  ChungTool.getUrlParameter = getUrlParameter;
+  ChungTool.isOnline = isOnline;
+  ChungTool.isNull = isNull;
+  ChungTool.isIOS = isIOS;
+  simpleShow = c_simpleShow;
+  simpleHide = c_simpleHide;
+
+
+})();
+
+function init_base() {
+  const INIT_VIEWPORT = true;
+  const VIEWPORT_WIDTH = 375;
+
+
+  /////////////////////////////////////////////
+  //        更改 meta 上的 viewport           //
+  /////////////////////////////////////////////
+
+  if (INIT_VIEWPORT) {
+    const sUserAgent = navigator.userAgent.toLowerCase();
+    const bIsAndroid = sUserAgent.match(/android/i) == "android";
+    const viewport = document.querySelector("meta[name=viewport]");
+
+    if (bIsAndroid) {
+      const deviceWidth = screen.width;
+      const getTargetDensitydpi = VIEWPORT_WIDTH / deviceWidth * window.devicePixelRatio * 160;
+      const targetDensitydpi = `target-densitydpi=${getTargetDensitydpi}, width=${VIEWPORT_WIDTH}, user-scalable=no`;
+
+      viewport.setAttribute('content', targetDensitydpi);
+    } else {
+      viewport.setAttribute('content', `width=${VIEWPORT_WIDTH} user-scalable=0`);
+
+    }
+  }
+
+
+
+  /////////////////////////////////////////////
+  //              fastclick                  //
+  /////////////////////////////////////////////
+
+  FastClick.attach(document.body);
+
+}
+
+
+
+
+init_base();
+
+
+$(document).ready(() => {
+  init_header();
+  // init_index();
+  init_moblie_content();
+
+  initPagesView();
+  init_igWall();
+  init_motus();
+});
+
+
+
+
+
+
+function init_moblie_content() {
+  $('.moreBlock').click(function () {
+    $(this).closest('.content').toggleClass('m-showfullContent');
+  });
+}
+
+
+
+
+function initPagesView() {
+  setInterval(function () {
+    const st = $(window).scrollTop();
+    let activePageId;
+    $('.menuPage').each((index, el) => {
+      const point = $(el).offset().top + $(el).height();
+      activePageId = index;
+      if (point > st + 200) {
+        return false;
+      }
+    });
+
+    $('#menu li').eq(activePageId).addClass('active').siblings('li').removeClass('active');;
+  }, 100);
+  // window.addEventListener('scroll', () => {
+
+  // })
+}
+function init_header() {
+
+  // moblie header btn
+  $('#header .menuBtn,#header .clozBtn,#header li').click(() => {
+    $('#header #menu').toggleClass('active');
+  });
+
+
+  $('#header li').click(function () {
+    var t = $(this);
+    ChungTool.pageScrollAni($(`.menuPage-${t.attr('data-menu')}`).offset().top - 50);
+  });
+}
+let loading = false;
+let pageSize = 20;
+let page = 0;
+let $gridLoading = $('.grid-loading');
+let $grid;
+
+
+$.fn.isInViewPort = function (offset) {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+  return elementBottom > viewportTop && elementTop < viewportBottom && elementBottom < viewportBottom - offset;
+};
+
+
+function init_igWall() {
+  initPicWall();
+  if ($('.grid-loading').length != 0) {
+    console.log('nextPage');
+    nextPage();
+  }
+}
+
+function initPicWall() {
+  $grid = $('.grid').masonry({
+    // options
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    gutter: '.gutter-sizer',
+    percentPosition: true });
+
+
+  $grid.imagesLoaded().progress(function () {
+    $grid.masonry('layout');
+  });
+
+
+
+  $(window).on('scroll', function (e) {
+    if ($gridLoading != null && $gridLoading.isInViewPort(-50)) {
+      nextPage();
+    }
+  });
+}
+
+function nextPage() {
+  // console.log(456);
+  if (loading) {
+    return;
+  }
+  page++;
+  toggleLoading(true);
+  $.get(`https://event.catchad.com.tw/v2/api/event/toyota_life100/hashtag/entries?page_size=${pageSize}&page=${page}`, function (response, status) {
+    // console.log(response);
+    if (response.data.length == 0) {
+      noMoreData();
+      return;
+    }
+    // console.log(response.data);
+
+    for (var i in response.data) {
+      var entry = response.data[i];
+      var $element = $('#grid-item-tpl').clone();
+      $element.attr('id', 'grid-item-' + entry.id);
+      $element.css('visibility', 'hidden');
+      $element.find('a').attr('href', entry.permalink);
+      $element.find('img').attr('src', entry.media_url);
+      $element.find('.like_count').text(entry.like_count);
+      $element.find('.comments_count').text(entry.comments_count);
+      $element.find('p').text(entry.caption.substr(0, 50) + '...');
+      $grid.append($element).masonry('appended', $element);
+    }
+    $grid.imagesLoaded().
+    progress(function (instance, image) {
+      let $gridItem = $(image.img).parents('.grid-item');
+      $gridItem.css('visibility', 'visible');
+      $grid.masonry('layout');
+    }).
+    always(function (instance) {
+      toggleLoading(false);
+    });
+  });
+}
+
+
+function toggleLoading(show) {
+  loading = show;
+  $gridLoading.css('visibility', show ? 'visible' : 'hidden');
+}
+
+function noMoreData() {
+  loading = false;
+  $gridLoading.remove();
+  $gridLoading = null;
+}
+function init_motus() {
+  // index
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-1-1')[0],
+    keyframes: [{
+      translateY: -50 },
+    {
+      translateY: 200 }] }));
+
+
+
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-1-2')[0],
+    keyframes: [{
+      translateY: 50 },
+    {
+      translateY: -50 }] }));
+
+
+
+
+  // 瘦子
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-2-1')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: -250 }] }));
+
+
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-2-2')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: -150 }] }));
+
+
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-2-3')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: 100 }] }));
+
+
+
+
+  // 許允樂
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-3-1')[0],
+    keyframes: [{
+      translateY: 250 },
+    {
+      translateY: 0 }] }));
+
+
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-3-2')[0],
+    keyframes: [{
+      translateY: 150 },
+    {
+      translateY: 0 }] }));
+
+
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-3-3')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: 100 }] }));
+
+
+
+  // Yin & Yei
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-4-1')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: -250 }] }));
+
+
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-4-2')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: -150 }] }));
+
+
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-4-3')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: 100 }] }));
+
+
+
+  // Kenji & Hsin Fan
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-5-1')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: 250 }] }));
+
+
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-5-2')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: 150 }] }));
+
+
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-5-3')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: 100 }] }));
+
+
+
+  // 阿酸
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-6-1')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: -250 }] }));
+
+
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-6-2')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: -150 }] }));
+
+
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-6-3')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: 100 }] }));
+
+
+
+  // Chris
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-7-1')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: 250 }] }));
+
+
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-7-2')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: 150 }] }));
+
+
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-7-3')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: 100 }] }));
+
+
+
+
+
+  Motus.addAnimation(new Motus.Animation({
+    $el: $('#ani-tag-ig-1')[0],
+    keyframes: [{
+      translateY: 0 },
+    {
+      translateY: 100 }] }));
+
+
+}
 //# sourceMappingURL=all.js.map
