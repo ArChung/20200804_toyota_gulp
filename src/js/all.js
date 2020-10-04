@@ -37,7 +37,7 @@ function initPagesView() {
       }
     })
 
-    $('#menu li').eq(activePageId).addClass('active').siblings('li').removeClass('active');;
+    $('#menu .jBtn').eq(activePageId).addClass('active').siblings('li').removeClass('active');;
   },100);
   // window.addEventListener('scroll', () => {
     

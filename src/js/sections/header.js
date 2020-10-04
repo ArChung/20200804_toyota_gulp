@@ -6,8 +6,17 @@ function init_header() {
   });
 
 
-  $('#header li').click(function () {
+  $('#header .jBtn').click(function () {
     var t = $(this);
-    ChungTool.pageScrollAni($(`.menuPage-${t.attr('data-menu')}`).offset().top-50)
+    jump(t.attr('data-menu'));
   });
+
+  const page = ChungTool.getUrlParameter('page');
+  if(page){
+    jump(page);
+  }
+
+  function jump(s){
+    ChungTool.pageScrollAni($(`.menuPage-${s}`).offset().top-50);
+  }
 }
