@@ -486,6 +486,12 @@ html,body
       .picWall
         .grid-sizer,.grid-item
           width: 24%
+          @media screen and (max-width: 1024px)
+            width: 24%
+          @media screen and (max-width: 850px)
+            width: 32%
+          +phone 
+            width: 48%
   .container
     max-width: 1160px
     padding: 0 35px 50px
