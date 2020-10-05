@@ -168,7 +168,7 @@ export function babel() {
  *****************************************************/
 export function imageMin() {
   return gulp
-    .src("./src/images/*.{gif,png,jpg,jpeg}")
+    .src("./src/images/**/*.{gif,png,jpg,jpeg}")
     .pipe(cache(imagemin([
       //png
       imageminPngquant({
