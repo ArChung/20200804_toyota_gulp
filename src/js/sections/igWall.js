@@ -1,3 +1,4 @@
+
 let loading = false;
 let pageSize = 20;
 let page = 0;
@@ -16,10 +17,7 @@ $.fn.isInViewPort = function (offset) {
 
 function init_igWall() {
   initPicWall();
-  if ($('.grid-loading').length!=0) {
-    console.log('nextPage');
-    nextPage();
-  }
+
 }
 
 function initPicWall() {
@@ -37,11 +35,43 @@ function initPicWall() {
 
 
 
-  $(window).on('scroll', function (e) {
-    if ($gridLoading != null && $gridLoading.isInViewPort(-50)) {
-      nextPage();
-    }
-  });
+
+
+  if (!$('#pic-section').hasClass('ex')) {
+    $(window).on('scroll', function (e) {
+      if ($gridLoading != null && $gridLoading.isInViewPort(-50)) {
+        nextPage();
+      }
+    });
+    nextPage();
+  } else {
+    initEventPicWall();
+  }
+}
+
+
+function initEventPicWall() {
+  const num = 59;
+  for (var i = 1; i <= num; i++) {
+    var $element = $('#grid-item-tpl2').clone();
+    $element.find('a').attr('href', `./images/eventPhoto/ex${('0' + i).slice(-2)}.jpg`);
+    $element.find('img').attr('src', `./images/eventPhoto/ex${('0' + i).slice(-2)}-s.jpg`);
+    $grid.append($element).masonry('appended', $element);
+    $element.attr('data-src',`./images/eventPhoto/ex${('0' + i).slice(-2)}.jpg`);
+
+  }
+
+  $grid.imagesLoaded()
+    .progress(function (instance, image) {
+      let $gridItem = $(image.img).parents('.grid-item');
+      $gridItem.css('visibility', 'visible');
+      $grid.masonry('layout');
+    })
+    .always(function (instance) {
+      toggleLoading(false);
+    });
+
+    lightGallery(document.getElementById('eventPhotos'));
 }
 
 function nextPage() {
